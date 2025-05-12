@@ -143,12 +143,14 @@ body{
   align-items: center;
 }
 
+.form h2{
+  font-weight: 800;
+}
+
 .form--signup{
   width: 700px;
   height: 650px;
 }
-
-
 
 .form__header{
   display: flex;
@@ -157,7 +159,7 @@ body{
 
 .subtitulo{
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--verde-oscuro);
 }
 
@@ -286,22 +288,23 @@ body{
   padding: 0 10px;
   width: 100%;
   position: relative;
+  gap: 30px;
 }
 
-.content--user-interface{
-  padding: 15px 25px;
+.content--ui{
+  padding: 10px 25px 15px;
   grid-template-rows: 100px 1fr;
 }
 
 .header__logo{
   display: flex;
   width: auto;
-  height: 60px;
+  height: 70px;
 }
 
 .titulo{
   font-size: 3.5rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--verde-oscuro);
 }
 
@@ -326,5 +329,45 @@ body{
   display: flex;
   font-size: 40px;
   color: var(--verde-oscuro);
-  
+  cursor: pointer; 
+}
+
+::-webkit-scrollbar {
+  width:5px;
+  height: 5px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+.dashboard{
+  background-color: var(--gris-panel);
+  padding: 30px;
+  margin: 10px;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px 0 hsla(0, 0%, 0%, 0.3);
+  display: grid;
+  grid-template-rows: 60px 1fr;
+  overflow: hidden;
+}
+
+.dashboard__title{
+  margin-left: 15px;
+  align-self: center;
+  /* margin-bottom: 20px; */
+}
+
+.dashboard__content{
+  display: flex;
+  max-height: 100%;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+}
+
+.card{
+  width: 350px;
+  height: 350px;
+  background-color: var(--blanco);
+  margin: 20px;
 }
