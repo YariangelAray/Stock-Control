@@ -14,17 +14,45 @@
       <form action="" class="form form--signup">
         <div class="form__header"><h2 class="subtitulo">Registrarse</h2></div>
         <div class="form__body">
-          <select name="Rol" id="rol" class="input">
-            <option value="">Seleccione su Rol</option>
-            <option value="rol_1">Usuario Administrativo</option>
-            <option value="rol_2">Usuario Corriente</option>
+
+          <input type="text" class="input" placeholder="Nombres" name="nombre">          
+          
+          <select name="programa" id="programa" class="input input--select">
+            <option value="">Programa de Formación</option>
+            <option value="prog_1">(ADSO) - Análisis y Desarrollo de Software</option>
           </select>
-          <input type="text" class="input" placeholder="Número de Documento">
-          <input type="text" class="input" placeholder="Contraseña">
+          
+          <input type="text" class="input" placeholder="Apellidos" name="apellido">                    
+
+          <select name="ficha" id="ficha" class="input input--select">
+            <option value="">Número de Ficha</option>
+            <option value="ficha_1">2894667</option>
+          </select>
+
+          <select name="tipo_documento" id="tipo_documento" class="input input--select">
+            <option value="">Tipo de Documento</option>
+            <option value="tipo_1">Tarjeta de Identidad</option>
+            <option value="tipo_2">Cédula de Ciudadania</option>
+            <option value="tipo_3">Cédula de Extranjería</option>
+          </select>
+
+          <input type="text" class="input" placeholder="Número de Documento" name="no_documento">        
+
+          <select name="genero" id="genero" class="input input--select">
+            <option value="">Seleccione su Género</option>
+            <option value="gen_1">Masculino</option>
+            <option value="gen_2">Femenino</option>
+            <option value="gen_3">Otro</option>
+          </select>
+
+          <input type="text" class="input" placeholder="Correo Electrónico" name="correo">          
+          <input type="text" class="input" placeholder="Número de Télefono" name="telefono">        
+          <input type="text" class="input" placeholder="Contraseña" name="contraseña">
+
         </div>
         <div class="form__action">
-          <button class="button">Iniciar Sesión</button>
-          <a href="" class="link">Registrarse</a>
+          <button class="button">Registrarse</button>
+          <a href="" class="link">Iniciar Sesión</a>
         </div>
       </form>
 
@@ -41,7 +69,7 @@
         <img src="Img/Titulo.png" alt="Stock Control" >        
       </div>  
 
-      <div class="main__img-cajas main__img-cajas--rigth">
+      <div class="main__img-cajas main__img-cajas--right">
         <img src="Img/CAJAS.png" alt="cajas_inventario">        
       </div>
 
