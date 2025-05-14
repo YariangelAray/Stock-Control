@@ -139,7 +139,7 @@ body{
   padding: 20px 20px;
 
   display: grid;
-  grid-template-rows: 50px 3fr 100px;
+  grid-template-rows: auto 3fr auto;
   align-items: center;
 }
 
@@ -192,6 +192,7 @@ body{
   border: 2px solid var(--verde-claro);
   border-radius: 20px;
   padding: 0 15px 0;
+  transition: 0.2s;
 }
 
 .input--select{
@@ -221,8 +222,11 @@ body{
 }
 
 .button{
-  width: 170px;
-  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 45px;
   margin: 10px;
   font-weight: 600;
   font-size: 1.2rem;
@@ -231,6 +235,8 @@ body{
   border-radius: 20px;
   background-color: var(--verde-oscuro);
   cursor: pointer;
+  text-decoration: none;
+  transition: 0.2s;
 }
 .button:hover{
   box-shadow: 0 2px 5px 0 #0000004d;
@@ -239,6 +245,7 @@ body{
   font-weight: 500;
   font-size: 1.1rem;
   color: var(--verde-oscuro);
+  transition: 0.2s;
 }
 .link:hover{
   font-weight: 600;
@@ -294,6 +301,8 @@ body{
 .content--ui{
   padding: 10px 25px 15px;
   grid-template-rows: 100px 1fr;
+  row-gap: 10px;
+  position: relative;
 }
 
 .header__logo{
@@ -315,26 +324,58 @@ body{
 
 .user{
   display: flex;
-  align-self: end;
+  align-items: center;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   right: 15px;
   background-color: var(--blanco);
   border-radius: 50px;
-  filter: drop-shadow(0px 2px 2px #00000047);  
-  width: auto;
+  filter: drop-shadow(0px 2px 2px #00000047);
 }
 .user > .icon{
   display: flex;
   font-size: 40px;
   color: var(--verde-oscuro);
-  cursor: pointer; 
+}
+
+.user-menu{
+  width: 0;
+  height: 0;
+  background-color: var(--verde-claro);
+  position: absolute;
+  filter: drop-shadow(-4px 0px 8px #00000047);
+  top: -10px;
+  right: -500px;
+  border-radius: 50px 0 0 50px;
+  z-index: 2;
+}
+
+.menu-activar{
+  display: none;
+}
+
+.menu-activar:checked{
+  display: inline;
+  appearance: none;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: -10px;
+  left: -25px;
+  background-color: #0000003c;
+  z-index: 1;
+}
+.menu-activar:checked ~ .user-menu{
+  top: -10px;
+  right: -25px;
+  width: 450px;
+  height: 100vh;
 }
 
 ::-webkit-scrollbar {
-  width:5px;
-  height: 5px;
+  width:8px;
+  height: 8px;
 }
 ::-webkit-scrollbar-thumb{
   background-color: transparent;
@@ -346,7 +387,7 @@ body{
   padding: 30px;
   margin: 10px;
   border-radius: 20px;
-  box-shadow: 0 2px 8px 0 hsla(0, 0%, 0%, 0.3);
+  box-shadow: 0 2px 8px 0 #0000004d;
   display: grid;
   grid-template-rows: 60px 1fr;
   overflow: hidden;
@@ -355,7 +396,6 @@ body{
 .dashboard__title{
   margin-left: 15px;
   align-self: center;
-  /* margin-bottom: 20px; */
 }
 
 .dashboard__content{
@@ -365,9 +405,82 @@ body{
   overflow-y: scroll;
 }
 
+.dashboard__content:hover::-webkit-scrollbar-thumb{
+  background-color: var(--gris-claro);
+}
+
 .card{
   width: 350px;
   height: 350px;
   background-color: var(--blanco);
   margin: 20px;
+  box-shadow: 0 2px 8px 0 #00000026;
+  border-radius: 40px;
+  display: grid;
+  padding: 20px;
+  grid-template-rows: auto 1fr;
+}
+
+.new-card{
+  width: 350px;
+  height: 350px;
+  background-color: var(--gris-claro);
+  margin: 20px;
+  border-radius: 40px;
+  transition: 0.5s;
+  position: relative;
+  cursor: pointer;
+}
+.new-card::before{
+  content: "+";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5rem;
+  color: var(--verde-oscuro);
+  font-weight: bold;
+  font-family: 'Courier New', Courier;
+}
+.new-card:hover{
+  background-color: var(--gris-oscuro);
+}
+
+.card__header{
+  height: auto;
+  border-bottom: 2px solid var(--verde-claro);
+  color: var(--verde-claro);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding-bottom: 15px;
+}
+.card__header > h3{
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.card__content{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 5px;
+}
+
+.card__details{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-details{
+  font-size: 0.9rem;
+  font-weight: 550;
+  color: var(--gris-letras);
+}
+
+.text-details--bold{
+  font-weight: 700;
+  color: var(--gris-letras-oscuras);
 }
