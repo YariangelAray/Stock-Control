@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+  
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">  -->
+  <link rel="stylesheet" href="style.css">
+  <title>Ambientes</title>
+
+</head>
+<body class="content content--ui">
+  <header class="header">
+    <div class="header__logo">
+      <img src="Img/LogoTituloVerde.png" alt="logo">      
+    </div>
+
+    <hr class="separacion separacion--verde">
+    <div class="buscador">
+      <i class="icon ri-search-line"></i>
+      <input type="search" placeholder="Buscar Ambientes">
+    </div>
+
+    <label for="menu-activar" class="user">
+      <iconify-icon icon="heroicons:user-circle" class="icon"></iconify-icon>
+    </label>
+    <input type="checkbox" class="menu-activar" id="menu-activar">
+
+    <div class="user-menu">
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+        <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <nav class="nav">
+      <a class="nav__item nav__item--selected" href=""><span>Ambientes</span></a>
+      <a class="nav__item">Detalles</a>
+      <a class="nav__item">Bienes</a>
+      <!-- <ul class="nav__list">
+        <li class="nav__item"><a href="">Detalles</a></li>
+        <li class="nav__item nav__item--selected"><a href="">Ambientes</a></li>
+        <li class="nav__item"><a href="">Bienes</a></li>
+        <li class="nav__item"><a href="">Reportes</a></li>
+      </ul> -->
+    </nav>
+    <div class="dashboard dashboard--navegation">
+      <div>
+        <h2 class="dashboard__title subtitulo">Distribución por ambientes:</h2>
+        <p class="dashboard__details text-details">Aquí puede observar en qué ambientes físicos estan ubicados los elementos del inventario</p>
+      </div>
+      <div class="dashboard__content">
+        <div class="card">
+          <div class="card__header">
+            <h3>Nombre del ambiente</h3>
+          </div>
+          <div class="card__content">
+            <div class="card__details">
+              <p class="text-details">Cantidad de bienes:</p>
+              <p class="text-details text-details--bold">1256</p>
+            </div>
+          </div>
+          <div class="card__actions">
+            <a class="button" href="">Ver mapa</a>
+          </div>
+        </div>
+        <div class="new-card"></div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
