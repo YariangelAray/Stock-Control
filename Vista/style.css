@@ -7,6 +7,10 @@
   font-family: "Work Sans", sans-serif;
 }
 
+html{
+  overflow: hidden;
+}
+
 :root{
   --verde-claro: #39A900;
   --verde-oscuro: #007832;
@@ -296,7 +300,7 @@ body{
   padding-right: 80px;
   width: 100%;
   position: relative;
-  gap: 30px;
+  gap: 30px;  
 }
 
 .buscador{
@@ -336,7 +340,6 @@ body{
 .content--ui{
   padding: 10px 25px 15px;
   grid-template-rows: 100px 1fr;
-  position: relative;
 }
 
 .header__logo{
@@ -356,6 +359,8 @@ body{
   height: 70px;
 }
 
+/* MENU DE USUARIO */
+
 .user{
   display: flex;
   align-items: center;
@@ -366,15 +371,13 @@ body{
   right: 15px;
   max-width: 40px;
   max-height: 40px;
-  min-width: 40px;
-  min-height: 40px;
+  /* min-width: 40px;
+  min-height: 40px; */
   background-color: var(--blanco);
   border-radius: 50px;
   filter: drop-shadow(0 2px 2px #00000047);
   cursor: pointer;
   color: var(--verde-oscuro);
-}
-.user > .icon{
   font-size: 50px;
 }
 
@@ -385,10 +388,11 @@ body{
   position: absolute;
   filter: drop-shadow(-4px 0px 8px #00000047);
   top: -10px;
-  right: -25px;  
+  right: -100px;
   border-radius: 50px 0 0 50px;
   z-index: 100;
   transition: 0.5s;
+  padding: 30px 20px;
 }
 
 .menu-activar{
@@ -408,7 +412,42 @@ body{
 }
 .menu-activar:checked ~ .user-menu{  
   width: 500px;
+  right: -25px;
 }
+
+.user-menu__header{
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+
+.user-menu__user-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 120px;
+  max-height: 120px;
+  /* width: 150px;
+  height: 150px; */
+  background-color: var(--verde-claro);
+  border-radius: 100px;
+  filter: drop-shadow(0 3px 3px #00000047);
+  color: var(--blanco);
+  font-size: 150px;
+}
+
+.user-menu__user-icon path{
+  stroke-width: 1%;
+}
+
+.subtitulo--blanco{
+  color: var(--blanco);
+}
+
+.user-menu__rol{
+  color: var(--blanco);
+}
+/* DASHBOARD  */
 
 ::-webkit-scrollbar {
   width:8px;
@@ -424,25 +463,20 @@ body{
   padding: 30px;
   margin: 10px;
   border-radius: 20px;
-  box-shadow: 0 4px 6px 1px #00000020;
+  box-shadow: 0 2px 6px 1px #00000020;
   display: grid;
   grid-template-rows: auto 1fr;
   overflow: hidden;
-  /* height: 100%;  */
-}
-.dashboard__title{
-  margin-left: 15px;
-  align-self: center;
 }
 
+.dashboard__header{
+  margin: 0 15px;
+}
 .dashboard__details{
-  margin: 5px 15px;
+  margin: 10px 0 5px;
 }
-
-
 .dashboard__content{
   display: flex;
-  height: 100%;
   flex-wrap: wrap;
   overflow-y: scroll;
 }
@@ -530,50 +564,74 @@ body{
 /* NAVEGABILIDAD ENTRE PANELES*/
 
 .dashboard--navegation{
-  border-top-left-radius: 0;
-  margin-top: 0;
-  z-index: 3;
+  grid-template-rows: auto auto 1fr;
+  padding: 0;
 }
-.nav{
-  padding-left: 10px;
-  width: auto;
+.dashboard--navegation .dashboard__content,
+.dashboard--navegation .dashboard__header{
+  padding: 0 30px;
+}
+.dashboard--navegation .dashboard__header{
+  padding-top: 15px;
+}
+
+.nav{  
+  display: flex;
   height: 40px;
-  display: flex;
-}
-/* .nav__list{
-  display: flex;
-} */
-.nav__item{
-  display: flex;
-  z-index: -5;
-  list-style:none;
-  height: 41px;
-  width: 200px;
-  align-items: center;
-  justify-content: center;
   background-color: var(--gris-oscuro);
-  box-shadow: 0 4px 6px 1px #00000020;
-  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+}
+.nav__list{
+  display: flex;
+  list-style:none;
+}
+
+.nav__item{
+  width: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.nav__item a{
+  width: 100%;
   color:var(--gris-letras);
   text-decoration: none;
   font-weight: 500;
   font-size: 1.2rem;
-  overflow: hidden;
-}
-
-.nav__item--selected{
-  /* background-color: var(--gris-panel); */
-  z-index: -1;
-  position: relative;
-}
-
-.nav__item--selected span{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100%;
+}
+
+.nav__item--selected{
+  border-radius: 20px 20px 0 0;
   background-color: var(--gris-panel);
-  position: absolute;
-  z-index: 2;
+
+}
+
+/* SWITCH  */
+
+.toggle{
+  background: #eee;
+  width: 80px;
+  height: 40px;
+  padding: 5px;
+  border-radius: 50px;
+  margin: 40px;
+}
+.toggle label {
+  width: 30px;
+  height: 30px;
+  background: #ccc;
+  display: flex;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: all 0.25s ease 0s;
+}
+.toggle input {
+  display: none;
+}
+.toggle input:checked + label {
+  margin-left: 40px;
+  background: #47c;
 }
