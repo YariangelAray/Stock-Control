@@ -125,6 +125,7 @@ body{
 
 .separacion{
   border: none;
+  border-radius: 5px;
   background-color: var(--blanco);
   width: 3px;
   height: 110px;
@@ -394,7 +395,6 @@ body{
   transition: 0.5s;
   padding: 30px 20px;
 }
-
 .menu-activar{
   display: none;
 }
@@ -446,6 +446,26 @@ body{
 
 .user-menu__rol{
   color: var(--blanco);
+  margin-top: 10px;
+}
+
+.user-menu__separacion{
+  margin: 25px 0;
+  display: flex;
+  align-items: center;
+}
+
+.editar-perfil{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 100px;
+}
+
+.separacion--horizontal{
+  width: 100%;
+  height: 3px;
 }
 /* DASHBOARD  */
 
