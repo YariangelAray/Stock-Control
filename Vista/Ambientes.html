@@ -11,6 +11,7 @@
 
 </head>
 <body class="content content--ui">
+
   <header class="header">
     <div class="header__logo">
       <img src="Img/LogoTituloVerde.png" alt="logo">      
@@ -38,17 +39,31 @@
           <p class="user-menu__rol rol">Usuario Administrativo</p>
         </div>
       </div>
+      
+      <div class="user-menu__content">
+        <div class="user-menu__separacion">
+          <hr class="separacion separacion--horizontal">
+          <a href="" class="editar-perfil">Editar <i class="ri-edit-line"></i> </a>
+        </div>
 
-      <div class="user-menu__separacion">
-        <hr class="separacion separacion--horizontal">
-        <a href="" class="editar-perfil">Editar <i class="ri-edit-line"></i> </a>
+        <div class="user-menu__row">
+          <p class="text-details text-details--white">Modo oscuro: </p>
+          <div>
+            <input type="checkbox" id="my-switch" style="display: none;">
+            <label for="my-switch" class="switch">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+
       </div>
 
-      <div class="toggle">
-        <input type="checkbox" id="switch">
-        <label for="switch"></label>
+      <div class="user-menu__footer">        
+        <a href="">
+          <iconify-icon icon="ic:baseline-log-out" class="icon"></iconify-icon>
+          Cerrar <br> Sesión
+        </a>
       </div>
-
     </div>
   </header>
 
@@ -69,8 +84,11 @@
     </div>
 
     <div class="dashboard__content">
-      <div class="card">
+      <div class="card card--large">
         <div class="card__header">
+          <div class="card__img">
+            <img src="" alt="map-img">
+          </div>
           <h3>Nombre del ambiente</h3>
         </div>
         <div class="card__content">
@@ -83,7 +101,7 @@
           <a class="button" href="">Ver mapa</a>
         </div>
       </div>
-      <div class="new-card"></div>
+      <div class="new-card new-card--large"></div>
     </div>
   </main>
 </body>
