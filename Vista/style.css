@@ -707,6 +707,7 @@ input:checked + .switch .slider{
 .dashboard--navegation{
   grid-template-rows: auto auto 1fr;
   padding: 0;
+  padding-bottom: 30px;
 }
 .dashboard--navegation .dashboard__content,
 .dashboard--navegation .dashboard__header{
@@ -758,3 +759,9 @@ input:checked + .switch .slider{
   pointer-events: none;
 }
 
+/* DASHBOARD DE DETALLES */
+
+.dashboard--details-section{
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
