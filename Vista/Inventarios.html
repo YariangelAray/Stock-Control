@@ -20,8 +20,43 @@
       <iconify-icon icon="heroicons:user-circle" class="icon"></iconify-icon>
     </label>
     <input type="checkbox" class="menu-activar" id="menu-activar">
+    
     <div class="user-menu">
 
+      <div class="user-menu__header">
+        <div class="user-menu__user-icon">
+          <iconify-icon icon="heroicons:user-circle" class="icon"></iconify-icon>        
+        </div>
+        <div class="user-menu__info">
+          <h2 class="subtitulo subtitulo--blanco">Nombre del Usuario</h2>
+          <p class="user-menu__rol rol">Usuario Administrativo</p>
+        </div>
+      </div>
+      
+      <div class="user-menu__content">
+        <div class="user-menu__separacion">
+          <hr class="separacion separacion--horizontal">
+          <a href="" class="editar-perfil">Editar <i class="ri-edit-line"></i> </a>
+        </div>
+
+        <div class="user-menu__row">
+          <p class="text-details text-details--white">Modo oscuro: </p>
+          <div>
+            <input type="checkbox" id="my-switch" style="display: none;">
+            <label for="my-switch" class="switch">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="user-menu__footer">        
+        <a href="">
+          <iconify-icon icon="ic:baseline-log-out" class="icon"></iconify-icon>
+          Cerrar <br> Sesión
+        </a>
+      </div>
     </div>
 
   </header>
