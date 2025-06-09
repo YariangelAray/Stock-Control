@@ -7,7 +7,7 @@
   
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-  <title>Ambientes</title>
+  <title>Bienes del Inventario</title>
 
 </head>
 <body class="content content--ui">
@@ -20,7 +20,7 @@
     <hr class="separacion separacion--verde">
     <div class="buscador">
       <i class="icon ri-search-line"></i>
-      <input type="search" placeholder="Buscar Ambientes">
+      <input type="search" placeholder="Buscar elementos en inventario">
     </div>
 
     <label for="menu-activar" class="user">
@@ -72,39 +72,41 @@
 
     <nav class="nav">
       <ul class="nav__list">
-        <li class="nav__item nav__item--selected"><a href="">Ambientes</a></li>
+        <li class="nav__item"><a href="">Ambientes</a></li>
         <li class="nav__item"><a href="">Detalles</a></li>
-        <li class="nav__item"><a href="">Bienes</a></li>
+        <li class="nav__item nav__item--selected"><a href="">Bienes</a></li>
         <li class="nav__item"><a href="">Reportes</a></li>
       </ul>
     </nav>
 
     <div class="dashboard__header">
-      <h2 class="dashboard__title subtitulo">Distribución por ambientes:</h2>
-      <p class="dashboard__details text-details">Aquí puede observar en qué ambientes físicos estan ubicados los elementos del inventario</p>
+      
     </div>
 
     <div class="dashboard__content">
 
-      <div class="card card--large">
-        <div class="card__header">
-          <div class="card__img">
-            <img src="" alt="map-img">
-          </div>
-          <h3>Nombre del ambiente</h3>
-        </div>
-        <div class="card__content">
-          <div class="card__details">
-            <p class="text-details">Cantidad de bienes:</p>
-            <p class="text-details text-details--bold">1256</p>
-          </div>
-        </div>
-        <div class="card__actions">
-          <button class="button" href="">Ver mapa</button>
-        </div>
-      </div>
-
-      <div class="new-card new-card--large"></div>
+      <table class="table">
+        <thead class="table__head">
+          <tr class="table__row">
+            <th class="table__head-cell text-details text-details--medium-sized">Placa</th>
+            <th class="table__head-cell text-details text-details--medium-sized">Tipo</th>
+            <th class="table__head-cell text-details text-details--medium-sized">Fecha de Adquisición</th>
+            <th class="table__head-cell text-details text-details--medium-sized">Ambiente</th>
+            <th class="table__head-cell text-details text-details--medium-sized">Estado</th>
+            <th class="table__head-cell text-details text-details--medium-sized">Observaciones</th>
+          </tr>
+        </thead>
+        <tbody class="table__body">
+          <tr class="table__row">
+            <td class="table__cell text-details text-details--medium-sized">212121</td>
+            <td class="table__cell text-details text-details--medium-sized">PC</td>
+            <td class="table__cell text-details text-details--medium-sized">01/05/2025</td>
+            <td class="table__cell text-details text-details--medium-sized">ADSO</td>
+            <td class="table__cell text-details text-details--medium-sized">Bien</td>
+            <td class="table__cell text-details text-details--medium-sized">ALL GUD</td>            
+          </tr>
+        </tbody>
+      </table>
 
     </div>
   </main>

@@ -44,7 +44,7 @@
         </div>
 
         <div class="user-menu__row">
-          <p class="text-details text-details--white">Modo oscuro: </p>
+          <p class="text-details text-details--medium-sized text-details--white">Modo oscuro: </p>
           <div>
             <input type="checkbox" id="my-switch" style="display: none;">
             <label for="my-switch" class="switch">
@@ -77,11 +77,57 @@
     </nav>
 
     <div class="dashboard__content">
-      <section></section>
-      <section></section>
+
+      <h2 class="subtitulo dashboard__title dashboard__title--separacion">Resumen general</h2>
+      <div class="dashboard__row">
+        <p class="text-details text-details--medium-sized">Nombre del inventario:</p>
+        <p class="text-details text-details--medium-sized text-details--bold">Nombre del inventario</p>
+      </div>
+      <div class="dashboard__row">
+        <p class="text-details text-details--medium-sized">Responsable:</p>
+        <p class="text-details text-details--medium-sized text-details--bold">Nombre del Administrador</p>
+      </div>
+      <div class="dashboard__row">
+        <p class="text-details text-details--medium-sized">Fecha de creación:</p>
+        <p class="text-details text-details--medium-sized text-details--bold">01/06/2020</p>
+      </div>
+      <div class="dashboard__row">
+        <p class="text-details text-details--medium-sized">Última actualización:</p>
+        <p class="text-details text-details--medium-sized text-details--bold">01/04/2025</p>
+      </div>
+
+      <h2 class="subtitulo dashboard__title dashboard__title--separacion">Estadísticas</h2>
+      <div class="dashboard__row">
+        <p class="text-details text-details--medium-sized">Total de bienes registrados:</p>
+        <p class="text-details text-details--medium-sized text-details--bold">1256</p>
+      </div>
+      <div class="dashboard__row">
+        <p class="text-details text-details--medium-sized">Valor monetario total:</p>
+        <p class="text-details text-details--medium-sized text-details--bold">$ 91,080,750.00</p>
+      </div>
+      <div class="dashboard__row">
+        <p class="text-details text-details--medium-sized">Ambientes cubiertos:</p>
+        <p class="text-details text-details--medium-sized text-details--bold">2</p>
+      </div>
+      <div class="dashboard__row">
+        <p class="text-details text-details--medium-sized">Último elemento registrado:</p>
+        <p class="text-details text-details--medium-sized text-details--bold">último elemento</p>
+      </div>
+
+      <div class="dashboard__row acces-code">
+        <p class="text-details text-details--medium-sized ">Código de Acceso:</p>
+        <p class="text-details text-details--medium-sized ">c0d1g0</p>
+        <p class="text-details text-details--medium-sized ">Expira en:</p>
+        <p class="text-details text-details--medium-sized ">05:59:58</p>
+      </div>
+
     </div>
 
-    <div class="dashboard__actions"></div>
+    <div class="dashboard__actions">
+      <button class="button">Exportar Excel <iconify-icon icon="ri:import-fill" class="icon"></iconify-icon></button>
+      <button class="button">Generar Informe <iconify-icon icon="tdesign:file-download-filled" class="icon"></iconify-icon></button>
+      <button class="button button--white">Generar Código de Acceso</button>
+    </div>
 
   </main>
 </body>
