@@ -31,13 +31,16 @@
       <form action="" class="form form--signin">
         <div class="form__header"><h2 class="subtitulo">Ingresar</h2></div>
         <div class="form__body">
-          <select name="rol" id="rol" class="input input--select">
+
+          <select name="rol" id="rol" class="input input--select" required>
             <option value="">Seleccione su Rol</option>
-            <option value="rol_1">Usuario Administrativo</option>
-            <option value="rol_2">Usuario Corriente</option>
+            <option value="1">Usuario Administrativo</option>
+            <option value="2">Usuario Corriente</option>
           </select>
-          <input type="text" class="input" placeholder="Número de Documento">
-          <input type="password" class="input" placeholder="Contraseña">
+
+          <input type="text" class="input" placeholder="Número de Documento" name="documento" id="documento" required>
+          <input type="password" class="input" placeholder="Contraseña" name="contrasena" id="contrasena" required>
+
         </div>
         <div class="form__action">
           <button class="button">Iniciar Sesión</button>
@@ -52,6 +55,8 @@
     <div class="footer__copyright"><p>Copyright © Stock Control</p></div>
     <div class="footer__logo"><img src="Img/LogoTitulo.png" alt="logo_stockcontrol"></div>
   </footer>
+
+  <script src="JS/iniciarSesion.js" type="module"></script>
 </body>
 
 </html>
