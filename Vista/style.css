@@ -865,16 +865,7 @@ input:checked + .switch .slider{
   width: 100%;
 }
 
-/* 
-.table__body{
-  padding: 20px;
-}
 
-.table__body .table__row{
-  height: 50px;
-  border-bottom: 2px solid var(--gris-oscuro);
-}
-*/
 .table__cell{
   text-align: center;
   height: 50px;

@@ -1,100 +1,102 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">  
-  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-  <title>Inventarios</title>
-</head>
-<body class="content content--ui">
-  <header class="header">
-    <div class="header__logo">
-      <img src="Img/LogoTituloVerde.png" alt="logo">      
-    </div>
-
-    <hr class="separacion separacion--verde">
-    <h1 class="titulo">Bienvenido Administrador</h1>
-
-    <label for="menu-activar" class="user">
-      <iconify-icon icon="heroicons:user-circle" class="icon"></iconify-icon>
-    </label>
-    <input type="checkbox" class="menu-activar" id="menu-activar">
-    
-    <div class="user-menu">
-
-      <div class="user-menu__header">
-        <div class="user-menu__user-icon">
-          <iconify-icon icon="heroicons:user-circle" class="icon"></iconify-icon>        
-        </div>
-        <div class="user-menu__info">
-          <h2 class="subtitulo subtitulo--blanco nombre-usuario">Nombre del Usuario</h2>
-          <p class="user-menu__rol rol">Usuario Administrativo</p>
-        </div>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">  
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <title>Inventarios</title>
+  </head>
+  <body class="content content--ui">
+    <header class="header">
+      <div class="header__logo">
+        <img src="Img/LogoTituloVerde.png" alt="logo">      
       </div>
+
+      <hr class="separacion separacion--verde">
+      <h1 class="titulo">Bienvenido Administrador</h1>
+
+      <label for="menu-activar" class="user">
+        <iconify-icon icon="heroicons:user-circle" class="icon"></iconify-icon>
+      </label>
+      <input type="checkbox" class="menu-activar" id="menu-activar">
       
-      <div class="user-menu__content">
-        <div class="user-menu__separacion">
-          <hr class="separacion separacion--horizontal">
-          <a href="" class="editar-perfil">Editar <i class="ri-edit-line"></i> </a>
-        </div>
+      <div class="user-menu">
 
-        <div class="user-menu__row">
-          <p class="text-details text-details--white">Modo oscuro: </p>
-          <div>
-            <input type="checkbox" id="my-switch" style="display: none;">
-            <label for="my-switch" class="switch">
-              <span class="slider"></span>
-            </label>
+        <div class="user-menu__header">
+          <div class="user-menu__user-icon">
+            <iconify-icon icon="heroicons:user-circle" class="icon"></iconify-icon>        
+          </div>
+          <div class="user-menu__info">
+            <h2 class="subtitulo subtitulo--blanco nombre-usuario">Nombre del Usuario</h2>
+            <p class="user-menu__rol rol">Usuario Administrativo</p>
           </div>
         </div>
+        
+        <div class="user-menu__content">
+          <div class="user-menu__separacion">
+            <hr class="separacion separacion--horizontal">
+            <a href="" class="editar-perfil">Editar <i class="ri-edit-line"></i> </a>
+          </div>
 
-      </div>
+          <div class="user-menu__row">
+            <p class="text-details text-details--white">Modo oscuro: </p>
+            <div>
+              <input type="checkbox" id="my-switch" style="display: none;">
+              <label for="my-switch" class="switch">
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
 
-      <div class="user-menu__footer">        
-        <a href="">
-          <iconify-icon icon="ic:baseline-log-out" class="icon"></iconify-icon>
-          Cerrar <br> Sesión
-        </a>
-      </div>
-    </div>
-
-  </header>
-  
-  <main class="dashboard">
-    <div class="dashboard__header">
-      <h2 class="dashboard__title subtitulo">Inventarios del Administrador</h2>
-    </div>
-
-    <div class="dashboard__content">
-      <div class="card">
-        <div class="card__header">
-          <h3>Nombre del inventario</h3>
         </div>
-        <div class="card__content">
-          <div class="card__details">
-            <p class="text-details">Cantidad de bienes:</p>
-            <p class="text-details text-details--bold">1256</p>
-          </div>
-          <div class="card__details">
-            <p class="text-details">Valor monetario:</p>
-            <p class="text-details text-details--bold">$ 91,080,750.00</p>
-          </div>
-          <div class="card__details">
-            <p class="text-details">Ambientes cubiertos:</p>
-            <p class="text-details text-details--bold">2</p>
-          </div>
-          <div class="card__details">
-            <p class="text-details">Última actualización:</p>
-            <p class="text-details text-details--bold">01/04/2025</p>
-          </div>
-        </div>
-        <div class="card__actions">
-          <button class="button" href="">Ver inventario</button>
+
+        <div class="user-menu__footer">        
+          <a href="">
+            <iconify-icon icon="ic:baseline-log-out" class="icon"></iconify-icon>
+            Cerrar <br> Sesión
+          </a>
         </div>
       </div>
-      <div class="new-card"></div>
-    </div>
-  </main>
-</body>
+
+    </header>
+    
+    <main class="dashboard">
+      <div class="dashboard__header">
+        <h2 class="dashboard__title subtitulo">Inventarios del Administrador</h2>
+      </div>
+
+      <div class="dashboard__content">
+        <div class="card">
+          <div class="card__header">
+            <h3>Nombre del inventario</h3>
+          </div>
+          <div class="card__content">
+            <div class="card__details">
+              <p class="text-details">Cantidad de bienes:</p>
+              <p class="text-details text-details--bold">1256</p>
+            </div>
+            <div class="card__details">
+              <p class="text-details">Valor monetario:</p>
+              <p class="text-details text-details--bold">$ 91,080,750.00</p>
+            </div>
+            <div class="card__details">
+              <p class="text-details">Ambientes cubiertos:</p>
+              <p class="text-details text-details--bold">2</p>
+            </div>
+            <div class="card__details">
+              <p class="text-details">Última actualización:</p>
+              <p class="text-details text-details--bold">01/04/2025</p>
+            </div>
+          </div>
+          <div class="card__actions">
+            <button class="button" href="">Ver inventario</button>
+          </div>
+        </div>
+        <div class="new-card"></div>
+      </div>
+    </main>
+    
+    <script src="JS/inventario.js"></script>
+  </body>
 </html>

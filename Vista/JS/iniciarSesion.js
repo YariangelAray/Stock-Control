@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 
                 if (usuario.contrasena === contrasena && usuario.rol_id == rol && usuario.documento === documento) {
                     localStorage.setItem("usuario", JSON.stringify(usuario));
-                    window.location.href = `../Vista/Inventarios.html`;
+                    window.location.href = `./Inventarios.html`;
 
                 } else {
                     alert("Datos incorrectos o error al iniciar sesión.");
