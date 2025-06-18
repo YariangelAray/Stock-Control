@@ -1,53 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registro</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="content">
 
   <main class="home home--signup">
-    <section class="home__signup">      
+    <section class="home__signup">
 
-      <form action="" class="form form--signup">
-        <div class="form__header"><h2 class="subtitulo">Registrarse</h2></div>
+      <form action="" class="form form--signup" novalidate>
+        <div class="form__header">
+          <h2 class="subtitulo">Registrarse</h2>
+        </div>
         <div class="form__body">
 
-          <input type="text" class="input" placeholder="Nombres" name="nombre">          
-          
-          <select name="programa" id="programa" class="input input--select">
-            <option value="">Programa de Formación</option>
-            <option value="prog_1">(ADSO) - Análisis y Desarrollo de Software</option>
-          </select>
-          
-          <input type="text" class="input" placeholder="Apellidos" name="apellido">                    
+          <div class="form__control error">
+            <input type="text" class="input" placeholder="Nombres" name="nombres" required>
+          </div>
 
-          <select name="ficha" id="ficha" class="input input--select">
-            <option value="">Número de Ficha</option>
-            <option value="ficha_1">2894667</option>
-          </select>
+          <div class="form__control">
+            <input type="text" class="input" placeholder="Apellidos" name="apellidos" required>
+          </div>
 
-          <select name="tipo_documento" id="tipo_documento" class="input input--select">
-            <option value="">Tipo de Documento</option>
-            <option value="tipo_1">Tarjeta de Identidad</option>
-            <option value="tipo_2">Cédula de Ciudadania</option>
-            <option value="tipo_3">Cédula de Extranjería</option>
-          </select>
+          <div class="form__control">
+            <select name="tipo_documento_id" class="input input--select" required>
+              <option value="">Tipo de Documento</option>
+              <option value="1">Tarjeta de Identidad</option>
+              <option value="2">Cédula de Ciudadania</option>
+              <option value="3">Cédula de Extranjería</option>
+            </select>
+          </div>
 
-          <input type="text" class="input" placeholder="Número de Documento" name="no_documento">        
+          <div class="form__control">
+            <input type="text" class="input" placeholder="Número de Documento" name="documento" required>
+          </div>
 
-          <select name="genero" id="genero" class="input input--select">
-            <option value="">Seleccione su Género</option>
-            <option value="gen_1">Masculino</option>
-            <option value="gen_2">Femenino</option>
-            <option value="gen_3">Otro</option>
-          </select>
+          <div class="form__control">
+            <select name="programas" id="programas" class="input input--select" required>
+              <option value="">Programa de Formación</option>
+              <option value="1">(ADSO) - Análisis y Desarrollo de Software</option>
+            </select>
+          </div>
 
-          <input type="text" class="input" placeholder="Correo Electrónico" name="correo">          
-          <input type="text" class="input" placeholder="Número de Télefono" name="telefono">        
-          <input type="text" class="input" placeholder="Contraseña" name="contraseña">
+          <div class="form__control">
+            <select name="ficha_id" class="input input--select" required>
+              <option value="">Número de Ficha</option>
+              <option value="1">2894667</option>
+            </select>
+          </div>
+
+          <div class="form__control">
+            <input type="text" class="input" placeholder="Correo Electrónico" name="correo" required>
+          </div>
+
+          <div class="form__control">
+            <input type="text" class="input" placeholder="Número de Télefono" name="telefono" required>
+          </div>
+
+          <div class="form__control">
+            <select name="genero_id" class="input input--select" required>
+              <option value="">Seleccione su Género</option>
+              <option value="1">Masculino</option>
+              <option value="2">Femenino</option>
+              <option value="3">Otro</option>
+            </select>
+          </div>
+
+          <div class="form__control">
+            <input type="text" class="input" placeholder="Contraseña" name="contrasena" required>
+          </div>
 
         </div>
         <div class="form__action">
@@ -66,19 +92,23 @@
       </div>
 
       <div class="home__title">
-        <img src="Img/Titulo.png" alt="Stock Control" >        
-      </div>  
+        <img src="Img/Titulo.png" alt="Stock Control">
+      </div>
 
       <div class="home__img-cajas home__img-cajas--right">
-        <img src="Img/CAJAS.png" alt="cajas_inventario">        
+        <img src="Img/CAJAS.png" alt="cajas_inventario">
       </div>
 
     </section>
   </main>
 
   <footer class="footer">
-    <div class="footer__copyright"><p>Copyright © Stock Control</p></div>
+    <div class="footer__copyright">
+      <p>Copyright © Stock Control</p>
+    </div>
     <div class="footer__logo"><img src="Img/LogoTitulo.png" alt="logo_stockcontrol"></div>
-  </footer >
+  </footer>
+  <script src="JS/RegistroControlador.js" type="module"></script>
 </body>
+
 </html>

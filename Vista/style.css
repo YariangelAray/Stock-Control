@@ -137,7 +137,7 @@ body{
 
 .form{
   width: 400px;
-  height: 450px;
+  height: 400px;
   background-color: var(--gris-panel);
   border-radius: 40px;
   box-shadow: 0 0 10px 0px #00000047;
@@ -153,8 +153,8 @@ body{
 }
 
 .form--signup{
-  width: 700px;
-  height: 650px;
+  width: 650px;
+  height: 550px;
 }
 
 .form__header{
@@ -174,13 +174,17 @@ body{
   padding: 10px 15px;
   height: 100%;
   justify-content: center;
-  gap:10px;
+  gap:20px;
+}
+
+.form__control{
+  padding-top: 10px;
 }
 
 .form--signup .form__body{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
+  align-items: start;
   gap: 0;
   column-gap: 25px;
 }
@@ -188,14 +192,14 @@ body{
 .input{
   display: flex;
   width: 100%;
-  height: 50px;
+  height: 40px;
   font-size: 1.15rem;
   font-weight: 500;
   color: var(--gris-letras);
   border: none;
   outline: none;
   border: 2px solid var(--verde-claro);
-  border-radius: 20px;
+  border-radius: 15px;
   padding: 0 15px 0;
   transition: 0.2s;
 }
@@ -213,7 +217,7 @@ body{
 }
 
 .form--signin .input--select{
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .input:focus{
@@ -238,12 +242,12 @@ body{
   font-size: 1.2rem;
   color: var(--blanco);
   border: none;
-  border-radius: 20px;
+  border-radius: 15px;
   background-color: var(--verde-oscuro);
   cursor: pointer;
   text-decoration: none;
   transition: 0.2s;
-  padding: 12px 12px;
+  padding: 10px 12px;
   gap: 10px;
 }
 .button:hover{
@@ -294,6 +298,29 @@ body{
   width: 100%;
   height: 100%;
 }
+
+.error{
+  position: relative;
+}
+
+.form__control.error::after{
+  content: var(--error-content);
+  position: absolute;
+  font-size: 12px;
+  color: #c50606;
+  font-weight: bold;
+  right: 10px;
+  bottom: -18px;
+}
+
+.texto-advertencia {
+  display: flex;
+  
+  justify-content: end;
+  margin: 0 10px 0;  
+  text-align: right;
+}
+
 
 /* INVENTARIO */
 
@@ -831,8 +858,7 @@ input:checked + .switch .slider{
 
 .dashboard--details-section .button{
   font-size: 1rem;
-  padding: 8px 12px;
-  border-radius: 15px;
+  padding: 8px 12px;  
 }
 
 .button .icon{
