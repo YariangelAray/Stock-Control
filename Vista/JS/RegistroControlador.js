@@ -1,7 +1,8 @@
 import * as validaciones from "./Validaciones.js";
 import * as api from "./api.js";
+import './estilos.js';
 
-function manejarErrores(respuesta) {
+const manejarErrores = respuesta => {
 
   // Verificamos si hay un arreglo de errores
   if (Array.isArray(respuesta.errors) && respuesta.errors.length > 0) {
@@ -29,27 +30,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (campo.name == "documento" || campo.name == "telefono") {
             campo.addEventListener("keydown",validaciones.validarNumero);
-            if (campo.name == "documento") campo.addEventListener("keydown", (event) => validaciones.validarLimite(event, 11));
-            if (campo.name == "telefono") campo.addEventListener("keydown", (event) => validaciones.validarLimite(event, 15));
+            if (campo.name == "documento") campo.addEventListener("keydown", event => validaciones.validarLimite(event, 11));
+            if (campo.name == "telefono") campo.addEventListener("keydown", event => validaciones.validarLimite(event, 15));
         } else {
             if (campo.name == "nombres" || campo.name == "apellidos") {
-                campo.addEventListener("keydown", (event) => validaciones.validarLimite(event, 100));
+                campo.addEventListener("keydown", event => validaciones.validarLimite(event, 100));
                 campo.addEventListener("keydown", validaciones.validarTexto);
             }
             
             if (campo.name == "contrasena") {
-                campo.addEventListener("keydown", (event) => validaciones.validarLimite(event, 50));
+                campo.addEventListener("keydown", event => validaciones.validarLimite(event, 30));
                 campo.addEventListener("blur", () => validaciones.validarContrasena(campo));
             }
 
             if (campo.name == "correo") {
-                campo.addEventListener("keydown", (event) => validaciones.validarLimite(event, 100));
+                campo.addEventListener("keydown", event => validaciones.validarLimite(event, 100));
                 campo.addEventListener("blur", () => validaciones.validarCorreo(campo));
             }
         }
     });
 
-    formulario.addEventListener("submit", async (event) => {
+    formulario.addEventListener("submit", async event => {
         event.preventDefault();
 
         if (!validaciones.validarCampos(event)) return;
