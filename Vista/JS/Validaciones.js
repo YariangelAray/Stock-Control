@@ -1,13 +1,16 @@
+// Teclas espeiales
+const teclasEspeciales = ["Backspace", "Tab", "Enter", "ArrowLeft", "ArrowRight", "Delete", "Home", "End"]; // Teclas especiales que se permiten
+
 // Validación para los campos de texto con límite de caracteres
-export const validarLimite = (event, limite) => {    
-    if (event.target.value.length >= limite) event.preventDefault(); // Evitamos la acción de la tecla si el campo supera el límite    
+export const validarLimite = (event, limite) => {
+  const key = event.key;
+    if (!teclasEspeciales.includes(key) && event.target.value.length >= limite) event.preventDefault(); // Evitamos la acción de la tecla si el campo supera el límite    
 };
 
 // Validación para los campos de texto
 export const validarTexto = (event) => {
     const key = event.key; // Obtenemos la tecla presionada
     const regex = /^[\D]*$/i; // Expresión regular para letras y caracteres especiales
-    const teclasEspeciales = ["Backspace", "Tab", "Enter", "ArrowLeft", "ArrowRight", "Delete"]; // Teclas especiales que se permiten
 
     // Validamos si la tecla no es una letra
     if ((!regex.test(key)) &&
@@ -22,7 +25,6 @@ export const validarTexto = (event) => {
 export const validarNumero = (event) => {
     const key = event.key; // Obtenemos la tecla presionada
     const regex = /^[\d]*$/; // Expresión regular para números
-    const teclasEspeciales = ["Backspace", "Tab", "Enter", "ArrowLeft", "ArrowRight", "Delete"]; // Teclas especiales que se permiten
 
     // Validamos si la tecla no es un número
     if (!regex.test(key) && !teclasEspeciales.includes(key)) 
