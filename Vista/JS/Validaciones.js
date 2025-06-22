@@ -22,7 +22,7 @@ export const validarTexto = (event) => {
 export const validarNumero = (event) => {
     const key = event.key; // Obtenemos la tecla presionada
     const regex = /^[\d]*$/; // Expresión regular para números
-    const teclasEspeciales = ["Backspace", "Tab", "Enter", "ArrowLeft", "ArrowRight", "Delete",]; // Teclas especiales que se permiten
+    const teclasEspeciales = ["Backspace", "Tab", "Enter", "ArrowLeft", "ArrowRight", "Delete"]; // Teclas especiales que se permiten
 
     // Validamos si la tecla no es un número
     if (!regex.test(key) && !teclasEspeciales.includes(key)) 

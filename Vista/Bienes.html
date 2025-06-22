@@ -7,7 +7,8 @@
   
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-  <title>Bienes del Inventario</title>
+  
+  <title>Elementos del Inventario</title>
 
 </head>
 <body class="content content--ui">
@@ -68,46 +69,266 @@
     
   </header>
 
-  <main class="dashboard dashboard--navegation">
+  <main class="dashboard dashboard--navegation dashboard--elements-section">
 
     <nav class="nav">
       <ul class="nav__list">
+        <li class="nav__item back-icon"><a href="Inventarios.html"><i class="ri-arrow-left-circle-line .icon"></i></a></li>
         <li class="nav__item"><a href="">Ambientes</a></li>
         <li class="nav__item"><a href="">Detalles</a></li>
-        <li class="nav__item nav__item--selected"><a href="">Bienes</a></li>
+        <li class="nav__item nav__item--selected"><a href="">Elementos</a></li>
         <li class="nav__item"><a href="">Reportes</a></li>
       </ul>
     </nav>
 
     <div class="dashboard__header">
-      
+      <select name="" id="" class="input input--select filtro"></select>
+      <button class="button" id="AgregarElemento">Agregar Elemento          
+        <i class="ri-add-circle-fill icon"></i>
+      </button>
     </div>
 
     <div class="dashboard__content">
-
-      <table class="table">
-        <thead class="table__head">
-          <tr class="table__row">
-            <th class="table__head-cell text-details text-details--medium-sized">Placa</th>
-            <th class="table__head-cell text-details text-details--medium-sized">Tipo</th>
-            <th class="table__head-cell text-details text-details--medium-sized">Fecha de <br> Adquisición</th>
-            <th class="table__head-cell text-details text-details--medium-sized">Ambiente</th>
-            <th class="table__head-cell text-details text-details--medium-sized">Estado</th>
-            <th class="table__head-cell text-details text-details--medium-sized">Observaciones</th>
-          </tr>
-        </thead>
-        <tbody class="table__body">
-          <tr class="table__row">
-            <td class="table__cell text-details text-details--medium-sized">---</td>
-            <td class="table__cell text-details text-details--medium-sized">---</td>
-            <td class="table__cell text-details text-details--medium-sized">---</td>
-            <td class="table__cell text-details text-details--medium-sized">---</td>
-            <td class="table__cell text-details text-details--medium-sized">---</td>
-            <td class="table__cell text-details text-details--medium-sized">---</td>
-          </tr>
-        </tbody>
-      </table>
-
+      <div class="table-container">
+        <table class="table">
+          <thead class="table__head">
+            <tr class="table__row">
+              <th class="table__head-cell text-details text-details--medium-sized">Placa</th>
+              <th class="table__head-cell text-details text-details--medium-sized">Tipo</th>
+              <th class="table__head-cell text-details text-details--medium-sized">Fecha de <br> Adquisición</th>
+              <th class="table__head-cell text-details text-details--medium-sized">Ambiente</th>
+              <th class="table__head-cell text-details text-details--medium-sized">Estado</th>
+              <th class="table__head-cell text-details text-details--medium-sized">Observaciones</th>
+            </tr>
+          </thead>
+          <tbody class="table__body">
+            <tr class="table__row">
+              <td class="table__cell text-details">ejemlo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell text-details">ejemlo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell text-details">ejemlo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell text-details">ejemlo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell text-details">ejemlo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell text-details">ejemlo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell text-details">ejemlo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell text-details">ejemlo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell text-details">ejemlo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell text-details">ejemlo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell text-details">ejemlo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell text-details">ejemlo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell text-details">ejemlo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell text-details">ejemlo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell text-details">ejemlo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell text-details">ejemlo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell text-details">ejemlo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell text-details">ejemlo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell text-details">ejemlo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell text-details">ejemlo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell text-details">ejemlo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell text-details">ejemlo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell text-details">ejemlo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell text-details">ejemlo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell text-details">ejemlo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell text-details">ejemlo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell text-details">ejemlo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell text-details">ejemlo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+            </tr>
+          </tbody>
+        </table>        
+      </div>      
     </div>
   </main>
 </body>

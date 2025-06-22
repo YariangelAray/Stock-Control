@@ -615,6 +615,7 @@ input:checked + .switch .slider{
 
 .dashboard__header{
   margin: 0 15px;
+  position: relative;
 }
 .dashboard__details{
   margin: 10px 0 5px;
@@ -623,6 +624,7 @@ input:checked + .switch .slider{
   display: flex;
   flex-wrap: wrap;
   overflow-y: scroll;
+  position: relative;
 }
 
 .dashboard__content:hover::-webkit-scrollbar-thumb{
@@ -792,6 +794,14 @@ input:checked + .switch .slider{
   pointer-events: none;
 }
 
+.back-icon{
+  width: 50px;
+}
+
+.back-icon a{  
+  font-size: 1.5rem;
+}
+
 /* DASHBOARD DE DETALLES */
 
 .dashboard--details-section{
@@ -801,6 +811,7 @@ input:checked + .switch .slider{
 
 .dashboard--details-section .dashboard__content{
   flex-direction: column;
+  flex-wrap: nowrap;  
 }
 
 .dashboard__title--separacion{
@@ -877,22 +888,67 @@ input:checked + .switch .slider{
 
 /* TABLA */
 
-.table{
-  width: 100%;
+.table-container {    
   height: 100%;
-  background-color: var(--gris-claro);
-  border-collapse: collapse;
-  appearance: none;
-}
-
-.table__head{
-  background-color: var(--gris-oscuro);
-  height: 60px;
+  overflow-y: auto;
   width: 100%;
+  background-color: var(--gris-claro);
+  position: relative;
 }
 
+.table-container::-webkit-scrollbar {
+  width:0;
+  height:0;
+}
 
-.table__cell{
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* encabezado fijo */
+.table__head-cell {
+  position: sticky;
+  top: 0;
+  background-color: var(--gris-oscuro);  
+  z-index: 1;
+}
+
+/* celdas */
+.table__head-cell,
+.table__cell {
+  padding: 10px;
   text-align: center;
-  height: 50px;
+}
+
+.table__row{
+  position: relative;
+  height: 50px;  
+}
+
+.table__row::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 98%;
+  height: 1px;
+  background-color: var(--gris-oscuro);
+}
+
+/* ELEMENTOS */
+
+.dashboard__header .button{
+  font-size: 1rem;
+  position: static;
+  right: 10px;
+}
+
+.button .icon{
+  font-weight: 100;  
+}
+
+.filtro{
+  width: 100px;
 }
