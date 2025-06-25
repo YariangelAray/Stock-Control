@@ -238,6 +238,7 @@ body{
   min-width: 180px;
   width: max-content;
   height: max-content;
+  max-height: 40px;
   margin: 10px;
   font-weight: 600;
   font-size: 1.2rem;
@@ -251,15 +252,18 @@ body{
   padding: 10px 12px;
   gap: 10px;
 }
+
 .button:hover{
   box-shadow: 0 2px 5px 0 #0000004d;
 }
+
 .link{
   font-weight: 500;
   font-size: 1.1rem;
   color: var(--verde-oscuro);
   transition: 0.2s;
 }
+
 .link:hover{
   font-weight: 600;
 }
@@ -327,7 +331,6 @@ body{
   cursor: pointer;
 }
 
-
 /* INVENTARIO */
 
 .header{
@@ -337,7 +340,7 @@ body{
   padding-right: 80px;
   width: 100%;
   position: relative;
-  gap: 30px;  
+  gap: 30px;
 }
 
 .buscador{
@@ -375,14 +378,15 @@ body{
   color: var(--gris-letras);
 }
 .content--ui{
-  padding: 10px 25px 15px;
-  grid-template-rows: 100px 1fr;
+  padding: 10px 25px 25px;
+  grid-template-rows: 90px 1fr;
+  gap: 10px;
 }
 
 .header__logo{
   display: flex;
   width: auto;
-  height: 70px;
+  height: 50px;
 }
 
 .titulo{
@@ -393,7 +397,7 @@ body{
 
 .separacion--verde{
   background-color: var(--verde-oscuro);
-  height: 70px;
+  height: 50px;
 }
 
 /* MENU DE USUARIO */
@@ -611,7 +615,6 @@ input:checked + .switch .slider{
 .dashboard{
   background-color: var(--gris-panel);
   padding: 30px;
-  margin: 10px;
   border-radius: 20px;
   box-shadow: 0 2px 6px 2px #00000020;
   display: grid;
@@ -781,7 +784,7 @@ input:checked + .switch .slider{
   height: 100%;
   color:var(--gris-letras);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 550;
   font-size: 1.2rem;
   display: flex;
   align-items: center;
@@ -945,16 +948,33 @@ input:checked + .switch .slider{
 
 /* ELEMENTOS */
 
-.dashboard__header .button{
-  font-size: 1rem;
-  position: static;
-  right: 10px;
-}
-
 .button .icon{
-  font-weight: 100;  
+  font-weight: lighter;  
 }
 
-.filtro{
-  width: 100px;
+.dashboard--table-section .dashboard__header{
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  gap: 20px;
+}
+
+.dashboard--table-section .button{
+  position: absolute;
+  font-size: 1rem;
+  right: 15px;
+}
+
+.dashboard--table-section .input--select{
+  height: 35px;
+  width: 200px;
+}
+
+.dashboard--profile-section{
+  grid-template-rows: none;
+  grid-template-columns: auto 1fr;
+}
+
+.dashboard--profile-section .dashboard__sidebar{
+
 }

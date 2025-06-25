@@ -19,63 +19,62 @@ const manejarErrores = respuesta => {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    const formulario = document.querySelector(".form--signup");
-    
+  const formulario = document.querySelector(".form--signup");
 
-    const campos = [...formulario].filter((elemento) => elemento.hasAttribute("required") && (elemento.tagName == "INPUT" || elemento.tagName == "SELECT"));    
-    
 
-    campos.forEach((campo) => {
-        campo.addEventListener("blur", validaciones.validarCampo);
+  const campos = [...formulario].filter((elemento) => elemento.hasAttribute("required") && (elemento.tagName == "INPUT" || elemento.tagName == "SELECT"));
 
-        if (campo.name == "documento" || campo.name == "telefono") {
-            campo.addEventListener("keydown",validaciones.validarNumero);
-            if (campo.name == "documento") campo.addEventListener("keydown", event => validaciones.validarLimite(event, 11));
-            if (campo.name == "telefono") campo.addEventListener("keydown", event => validaciones.validarLimite(event, 15));
-        } else {
-            if (campo.name == "nombres" || campo.name == "apellidos") {
-                campo.addEventListener("keydown", event => validaciones.validarLimite(event, 100));
-                campo.addEventListener("keydown", validaciones.validarTexto);
-            }
-            
-            if (campo.name == "contrasena") {
-                campo.addEventListener("keydown", event => validaciones.validarLimite(event, 30));
-                campo.addEventListener("blur", () => validaciones.validarContrasena(campo));
-            }
+  campos.forEach((campo) => {
+    campo.addEventListener("blur", validaciones.validarCampo);
 
-            if (campo.name == "correo") {
-                campo.addEventListener("keydown", event => validaciones.validarLimite(event, 100));
-                campo.addEventListener("blur", () => validaciones.validarCorreo(campo));
-            }
-        }
-    });
+    if (campo.name == "documento" || campo.name == "telefono") {
+      campo.addEventListener("keydown", validaciones.validarNumero);
+      if (campo.name == "documento") campo.addEventListener("keydown", event => validaciones.validarLimite(event, 11));
+      if (campo.name == "telefono") campo.addEventListener("keydown", event => validaciones.validarLimite(event, 15));
+    } else {
+      if (campo.name == "nombres" || campo.name == "apellidos") {
+        campo.addEventListener("keydown", event => validaciones.validarLimite(event, 100));
+        campo.addEventListener("keydown", validaciones.validarTexto);
+      }
 
-    formulario.addEventListener("submit", async event => {
-        event.preventDefault();
+      if (campo.name == "contrasena") {
+        campo.addEventListener("keydown", event => validaciones.validarLimite(event, 30));
+        campo.addEventListener("blur", () => validaciones.validarContrasena(campo));
+      }
 
-        if (!validaciones.validarCampos(event)) return;
+      if (campo.name == "correo") {
+        campo.addEventListener("keydown", event => validaciones.validarLimite(event, 100));
+        campo.addEventListener("blur", () => validaciones.validarCorreo(campo));
+      }
+    }
+  });
 
-        validaciones.datos.tipo_documento_id = parseInt(validaciones.datos.tipo_documento_id);
-        validaciones.datos.genero_id = parseInt(validaciones.datos.genero_id);
-        validaciones.datos.ficha_id = parseInt(validaciones.datos.ficha_id);
-        validaciones.datos.rol_id = 2;
-        delete validaciones.datos.programas;
+  formulario.addEventListener("submit", async event => {
+    event.preventDefault();
 
-        try {
+    if (!validaciones.validarCampos(event)) return;
 
-            const respuesta = await api.post('usuarios', validaciones.datos);
+    validaciones.datos.tipo_documento_id = parseInt(validaciones.datos.tipo_documento_id);
+    validaciones.datos.genero_id = parseInt(validaciones.datos.genero_id);
+    validaciones.datos.ficha_id = parseInt(validaciones.datos.ficha_id);
+    validaciones.datos.rol_id = 2;
+    delete validaciones.datos.programas;
 
-            if (respuesta.ok) {
-                alert("Usuario registrado exitosamente.");
-                window.location.href = "./index.html";
-            } else {
-                const resultado = await respuesta.json();
-                manejarErrores(resultado);
-            }
+    try {
 
-        } catch (error) {
-            console.error("Error inesperado:", error);
-            alert("❌ Error al conectar con el servidor.");
-        }
-    });
+      const respuesta = await api.post('usuarios', validaciones.datos);
+
+      if (respuesta.ok) {
+        alert("Usuario registrado exitosamente.");
+        window.location.href = "./index.html";
+      } else {
+        const resultado = await respuesta.json();
+        manejarErrores(resultado);
+      }
+
+    } catch (error) {
+      console.error("Error inesperado:", error);
+      alert("❌ Error al conectar con el servidor.");
+    }
+  });
 });
