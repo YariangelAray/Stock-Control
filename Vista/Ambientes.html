@@ -5,110 +5,131 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="Img/Logo.png" type="image/png">
-  
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
-  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
   <title>Ambientes</title>
 
 </head>
 <body class="content content--ui">
 
-  <header class="header">
-    <div class="header__logo">
-      <img src="Img/LogoTituloVerde.png" alt="logo">      
+  <aside class="sidebar">
+    <div class="sidebar__logos">
+      <img src="Img/SENA.png" alt="SENA">
+      <hr class="separacion">
+      <img src="Img/LogoTitulo.png" alt="logo">      
     </div>
 
-    <hr class="separacion separacion--verde">
-    <div class="buscador">
-      <i class="icon ri-search-line"></i>
-      <input type="search" placeholder="Buscar Ambientes">
-    </div>
+    <nav class="sidebar__menu">
+      <ul class="sidebar__list">
+        <li class="sidebar__item">
+          <a href="Inventarios.html"><i class="ri-archive-line icon"></i>Ver Inventarios</a>
+        </li>
 
-    <label for="menu-activar" class="user">
-      <iconify-icon icon="heroicons:user-circle" class="icon"></iconify-icon>
-    </label>
-    <input type="checkbox" class="menu-activar" id="menu-activar">
+        <hr class="separacion separacion--horizontal">
 
-    <div class="user-menu">
-
-      <div class="user-menu__header">
-        <div class="user-menu__user-icon">
-          <iconify-icon icon="heroicons:user-circle" class="icon"></iconify-icon>        
+        <div class="menu__items">
+          <li class="sidebar__item">
+            <a href="Ambientes.html"><i class="ri-building-2-line icon"></i>
+              Ambientes
+            </a>
+          </li>
+          <li class="sidebar__item">
+            <a href="Detalles.html"><i class="ri-file-list-line icon"></i>
+              Detalles
+            </a>
+          </li>
+          <li class="sidebar__item">
+            <a href="Bienes.html"><i class="ri-clipboard-line icon"></i>
+            Elementos</a>
+          </li>
+          <li class="sidebar__item">
+            <a href="Reportes.html"><i class="ri-information-line icon"></i>Reportes</a>
+          </li>            
         </div>
-        <div class="user-menu__info">
-          <h2 class="subtitulo subtitulo--blanco">Nombre del Usuario</h2>
-          <p class="user-menu__rol rol">Usuario Administrativo</p>
-        </div>
-      </div>
-      
-      <div class="user-menu__content">
-        <div class="user-menu__separacion">
-          <hr class="separacion separacion--horizontal">
-          <a href="" class="editar-perfil">Editar <i class="ri-edit-line"></i> </a>
-        </div>
-
-        <div class="user-menu__row">
-          <p class="text-details text-details--white">Modo oscuro: </p>
-          <div>
-            <input type="checkbox" id="my-switch" style="display: none;">
-            <label for="my-switch" class="switch">
-              <span class="slider"></span>
-            </label>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="user-menu__footer">        
-        <a href="">
-          <iconify-icon icon="ic:baseline-log-out" class="icon"></iconify-icon>
-          Cerrar <br> Sesión
-        </a>
-      </div>
-    </div>
-    
-  </header>
-
-  <main class="dashboard dashboard--navegation">
-
-    <nav class="nav">
-      <ul class="nav__list">
-        <li class="nav__item back-icon"><a href="Inventarios.html"><i class="ri-arrow-left-circle-line .icon"></i></a></li>
-        <li class="nav__item nav__item--selected"><a href="">Ambientes</a></li>
-        <li class="nav__item"><a href="">Detalles</a></li>
-        <li class="nav__item"><a href="">Bienes</a></li>
-        <li class="nav__item"><a href="">Reportes</a></li>
       </ul>
-    </nav>
+    </nav>      
+  </aside>
 
-    <div class="dashboard__header">
-      <h2 class="dashboard__title subtitulo">Distribución por ambientes:</h2>
-      <p class="dashboard__details text-details">Aquí puede observar en qué ambientes físicos estan ubicados los elementos del inventario</p>
-    </div>
+  <div class="main">
 
-    <div class="dashboard__content">
+    <header class="header">
+      <h1 class="titulo">Bienvenid@, <span class="nombre-usuario">Administrador</span></h1>
 
-      <div class="card card--large">
-        <div class="card__header">
-          <div class="card__img">
-            <img src="" alt="map-img">
+      <label for="menu-activar" class="user">          
+        <i class="ri-user-line icon"></i>
+      </label>
+
+      <input type="checkbox" class="menu-activar" id="menu-activar">
+      
+      <div class="user-menu">
+        <div class="user-menu__header">
+          <div class="user">
+            <i class="ri-user-line icon"></i>      
           </div>
-          <h3>Nombre del ambiente</h3>
-        </div>
-        <div class="card__content">
-          <div class="card__details">
-            <p class="text-details">Cantidad de bienes:</p>
-            <p class="text-details text-details--bold">1256</p>
+
+          <div class="user-menu__info">
+            <h2 class="nombre-completo-usuario">Nombre del Usuario</h2>
+            <p class="user-menu__rol rol">Usuario Administrativo</p>
           </div>
         </div>
-        <div class="card__actions">
-          <button class="button" href="">Ver mapa</button>
+        
+        <div class="user-menu__content">
+          <div class="user-menu__separacion">
+            <hr class="separacion separacion--horizontal">
+            <a href="" class="editar-perfil">Editar perfil<i class="ri-edit-line"></i> </a>
+          </div>
+
+          <div class="user-menu__row">
+            <p>Apariencia: </p>
+            <div>
+              <input type="checkbox" id="my-switch" style="display: none;">
+              <label for="my-switch" class="switch">
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="user-menu__row">
+            <a href="index.html" class="button button--white logout">
+              <i class="ri-logout-box-r-line icon"></i>
+              Cerrar Sesión
+            </a>
+          </div>
         </div>
       </div>
 
-      <div class="new-card new-card--large"></div>
+    </header>
 
-    </div>
-  </main>
+    <main class="dashboard">
+
+      <div class="dashboard__header">
+        <h2 class="dashboard__title subtitulo">Distribución por ambientes:</h2>
+        <p class="dashboard__details text-details">Aquí puede observar en qué ambientes físicos estan ubicados los elementos del inventario</p>
+      </div>
+
+      <div class="dashboard__content">
+
+        <div class="card card--large">
+          <div class="card__header">
+            <div class="card__img">
+              <img src="" alt="map-img">
+            </div>
+            <h3>Nombre del ambiente</h3>
+          </div>
+          <div class="card__content">
+            <div class="card__details">
+              <p class="text-details">Cantidad de bienes:</p>
+              <p class="text-details text-details--bold">1256</p>
+            </div>
+          </div>
+          <div class="card__actions">
+            <button class="button" href="">Ver mapa</button>
+          </div>
+        </div>
+
+        <div class="new-card new-card--large"></div>
+
+      </div>
+    </main>
+  </div>
 </body>
 </html>

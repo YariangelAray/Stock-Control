@@ -704,7 +704,7 @@ input:checked + .switch .slider{
   font-size: 2rem;
 }
 .dashboard__details{
-  margin: 10px 0 5px;
+  margin-top: 5px;
 }
 
 .dashboard__content{
@@ -761,7 +761,7 @@ input:checked + .switch .slider{
 }
 
 .new-card--large, .card--large{
-  height: 450px;
+  height: 400px;
 }
 
 .card__header{
