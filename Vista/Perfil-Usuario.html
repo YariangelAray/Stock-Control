@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Img/Logo.png" type="image/png">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <title>Usuario Administrador</title>
+  </head>
+  <body class="content content--ui">
+    <header class="header">
+      <div class="header__logo">
+        <img src="Img/LogoTituloVerde.png" alt="logo">      
+      </div>
+
+      <hr class="separacion separacion--verde">
+      <h1 class="titulo">Usuario Administrador</h1>
+
+      <label for="menu-activar" class="user">
+        <iconify-icon icon="heroicons:user-circle" class="icon"></iconify-icon>
+      </label>
+      <input type="checkbox" class="menu-activar" id="menu-activar">
+      
+      <div class="user-menu">
+
+        <div class="user-menu__header">
+          <div class="user-menu__user-icon">
+            <iconify-icon icon="heroicons:user-circle" class="icon"></iconify-icon>        
+          </div>
+          <div class="user-menu__info">
+            <h2 class="subtitulo subtitulo--blanco nombre-usuario">Nombre del Usuario</h2>
+            <p class="user-menu__rol rol">Usuario Administrativo</p>
+          </div>
+        </div>
+        
+        <div class="user-menu__content">
+          <div class="user-menu__separacion">
+            <hr class="separacion separacion--horizontal">
+            <a href="" class="editar-perfil">Editar <i class="ri-edit-line"></i> </a>
+          </div>
+
+          <div class="user-menu__row">
+            <p class="text-details text-details--white">Modo oscuro: </p>
+            <div>
+              <input type="checkbox" id="my-switch" style="display: none;">
+              <label for="my-switch" class="switch">
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="user-menu__footer">        
+          <a href="index.html">
+            <iconify-icon icon="ic:baseline-log-out" class="icon"></iconify-icon>
+            Cerrar <br> Sesión
+          </a>
+        </div>
+      </div>
+
+    </header>
+    
+    <main class="dashboard dashboard--profile-section">
+
+      <div class="dashboard__sidebar">
+      </div>
+      
+      <div class="dashboard__content">
+        <h2 class="dashboard__title subtitulo">Editar Perfil</h2>
+      </div>
+    </main>
+    
+    <script src="JS/inventario.js"></script>
+  </body>
+</html>

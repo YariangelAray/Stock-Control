@@ -268,6 +268,7 @@ input[name="contrasena"] + .icon{
   min-width: 180px;
   width: max-content;
   height: max-content;
+  max-height: 40px;
   margin: 10px;
   font-weight: 600;
   font-size: 1.2rem;
@@ -292,6 +293,7 @@ input[name="contrasena"] + .icon{
   color: var(--verde-oscuro);
   transition: 0.2s;
 }
+
 .link:hover{
   font-weight: 600;
 }
@@ -483,7 +485,7 @@ input[name="contrasena"] + .icon{
 
 .separacion--verde{
   background-color: var(--verde-oscuro);
-  height: 70px;
+  height: 50px;
 }
 
 /* MENU DE USUARIO */
@@ -851,7 +853,7 @@ input:checked + .switch .slider{
   height: 100%;
   color:var(--gris-letras);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 550;
   font-size: 1.2rem;
   display: flex;
   align-items: center;
@@ -1015,16 +1017,33 @@ input:checked + .switch .slider{
 
 /* ELEMENTOS */
 
-.dashboard__header .button{
-  font-size: 1rem;
-  position: static;
-  right: 10px;
-}
-
 .button .icon{
-  font-weight: 100;  
+  font-weight: lighter;  
 }
 
-.filtro{
-  width: 100px;
+.dashboard--table-section .dashboard__header{
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  gap: 20px;
+}
+
+.dashboard--table-section .button{
+  position: absolute;
+  font-size: 1rem;
+  right: 15px;
+}
+
+.dashboard--table-section .input--select{
+  height: 35px;
+  width: 200px;
+}
+
+.dashboard--profile-section{
+  grid-template-rows: none;
+  grid-template-columns: auto 1fr;
+}
+
+.dashboard--profile-section .dashboard__sidebar{
+
 }
