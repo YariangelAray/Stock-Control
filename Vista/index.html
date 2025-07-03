@@ -9,7 +9,8 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
 </head>
 
-<body class="content">
+<body class="content content--auth">
+
   <main class="home">
 
     <section class="home__intro">
@@ -31,7 +32,10 @@
       </div>
 
       <form action="" class="form form--signin">
-        <div class="form__header"><h2 class="subtitulo">Ingresar</h2></div>
+        <div class="form__header">
+          <h2 class="subtitulo">Ingresar</h2>
+        </div>
+
         <div class="form__body">
 
           <div class="form__control">
@@ -48,7 +52,7 @@
 
           <div class="form__control">
             <input type="password" class="input" placeholder="Contraseña" name="contrasena" required id="contrasena">
-            <i class="iconPass ri-eye-line"></i>
+            <i class="icon ri-eye-line"></i>
           </div>
 
         </div>
@@ -62,8 +66,12 @@
   </main>
 
   <footer class="footer">
-    <div class="footer__copyright"><p>Copyright © Stock Control</p></div>
-    <div class="footer__logo"><img src="Img/LogoTitulo.png" alt="logo_stockcontrol"></div>
+    <div class="footer__copyright">
+      <p>Copyright © Stock Control</p>
+    </div>
+    <div class="footer__logo">
+      <img src="Img/LogoTitulo.png" alt="logo_stockcontrol">
+    </div>
   </footer>
 
   <script src="JS/IniciarSesionControlador.js" type="module"></script>

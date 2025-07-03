@@ -1,7 +1,10 @@
 import './estilos.js';
+import * as api from './api.js';
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
     const formulario = document.querySelector('.form--signin');
+    
+    console.log((await (await api.get('usuarios')).json()).data);
 
     formulario.addEventListener("submit", async (e) => {
         e.preventDefault();
@@ -13,31 +16,22 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(`Rol: ${rol}, Documento: ${documento}, Contraseña: ${contrasena}`);
 
         try {    
-        
-            const respuesta = await fetch(`http://localhost:8080/StockControl_API/api/usuarios/documento/${documento}`);
+                    
 
-            if (respuesta.ok) {
+            const respuesta = await api.post('usuarios/login', {
+                rol_id: parseInt(rol),
+                documento: documento,
+                contrasena: contrasena
+            });
 
-                const usuario = (await respuesta.json()).data;
-                const ingreso = true;
-                console.log(usuario);
-                
-                if (usuario.contrasena !== contrasena) {
-                    alert("La contraseña es incorrecta.");
-                    ingreso = false;             
-                }     
-                if (usuario.rol_id != rol) {
-                    alert("El rol del usuario es incorrecto.");
-                    ingreso = false;
-                }
-                if (ingreso){
-                    localStorage.setItem("usuario", JSON.stringify(usuario));
-                    window.location.href = `./Inventarios.html`;
-                }
+            if (!respuesta.ok) alert(`❌ ${respuesta.message || "Error desconocido."}`);
 
-            } else {
-                alert("El usuario no existe.");
-            }
+            alert(`✅ ${respuesta.message || "Inicio de sesión exitoso."}`);
+            const usuario = (await respuesta.json()).data;
+            // console.log(usuario);
+            
+            sessionStorage.setItem("usuario", JSON.stringify(usuario));
+            window.location.href = `./Inventarios.html`;
 
         } catch (error) {
             console.error("Error al conectarse con la API:", error);

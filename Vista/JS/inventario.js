@@ -1,7 +1,7 @@
-const usuario = JSON.parse(localStorage.getItem("usuario"));
+const usuario = JSON.parse(sessionStorage.getItem("usuario"));
 console.log(usuario);
 
-const nombreusuario = document.querySelector('.nombre-usuario');
+const nombreusuario = document.querySelector('.nombre-completo-usuario');
 const rol = document.querySelector('.rol');
 
 nombreusuario.textContent = usuario.nombres + " " + usuario.apellidos;

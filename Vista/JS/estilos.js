@@ -1,5 +1,5 @@
 const contrasena = document.querySelector("#contrasena");
-const iconoPass = document.querySelector(".iconPass");
+const iconoPass = document.querySelector("input[name='contrasena'] + .icon");
 
 iconoPass.addEventListener("click", () => {
   if (contrasena.type == "password") {
