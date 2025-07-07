@@ -58,7 +58,7 @@
   <div class="main">
 
     <header class="header">
-      <h1 class="titulo">Bienvenid@, <span class="nombre-usuario">Administrador</span></h1>
+      <h1 class="titulo">REPORTES DE ELEMENTOS</h1>
 
       <label for="menu-activar" class="user">
         <i class="ri-user-line icon"></i>
@@ -81,7 +81,7 @@
         <div class="user-menu__content">
           <div class="user-menu__separacion">
             <hr class="separacion separacion--horizontal">
-            <a href="" class="editar-perfil">Editar perfil<i class="ri-edit-line"></i> </a>
+            <a href="Perfil-Usuario.html" class="editar-perfil">Editar perfil<i class="ri-edit-line"></i> </a>
           </div>
 
           <div class="user-menu__row">
@@ -113,14 +113,11 @@
       </div>
 
       <div class="dashboard__header">
-        <h2 class="dashboard__title subtitulo">Reportes realizados</h2>
+        <h2 class="dashboard__title">Reportes realizados</h2>
         <!-- <div class="dashboard__actions">
           <h2 class="text-details text-details--medium-sized">Filtros:</h2>       
           <select name="filtro-estado" class="input input--select filtro">
             <option value="">Estados</option>
-          </select>
-          <select name="filtro-ambiente" class="input input--select filtro">
-            <option value="">Ambientes</option>
           </select>
     
           <button class="button" id="AgregarElemento">Agregar Elemento          
@@ -131,36 +128,28 @@
 
       <div class="dashboard__content">
 
-        <div class="table">
-          <div class="table__header-container">
-            <table class="table__layout">
-              <thead class="table__head">
-                <tr class="table__row">
-                  <th class="table__head-cell text-details text-details--medium-sized">Fecha de<br>Creación</th>
-                  <th class="table__head-cell text-details text-details--medium-sized">Autor</th>
-                  <th class="table__head-cell text-details text-details--medium-sized">Asunto</th>
-                  <th class="table__head-cell text-details text-details--medium-sized">Mensaje</th>
-                  <th class="table__head-cell text-details text-details--medium-sized">Placa del<br>Elemento</th>
-                </tr>
-              </thead>
-            </table>
-          </div>
+        <table class="table">
+          <thead class="table__head">
+            <tr class="table__row">
+              <th class="table__head-cell text-details text-details--medium-sized">Fecha de<br>Creación</th>
+              <th class="table__head-cell text-details text-details--medium-sized">Autor</th>
+              <th class="table__head-cell text-details text-details--medium-sized">Asunto</th>
+              <th class="table__head-cell text-details text-details--medium-sized">Mensaje</th>
+              <th class="table__head-cell text-details text-details--medium-sized">Placa del<br>Elemento</th>
+            </tr>
+          </thead>
 
-          <div class="table__scroll">
-            <table class="table__layout">
-              <tbody class="table__body">
-                <tr class="table__row">
-                  <td class="table__cell text-details">ejemlo</td>
-                  <td class="table__cell text-details">ejemplo</td>
-                  <td class="table__cell text-details">ejemplo</td>
-                  <td class="table__cell text-details">ejemplo</td>
-                  <td class="table__cell text-details">ejemplo</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        
+          <tbody class="table__body">
+            <tr class="table__row">
+              <td class="table__cell text-details">ejemlo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+              <td class="table__cell text-details">ejemplo</td>
+            </tr>
+          </tbody>
+        </table>
+
       </div>
     </main>
   </div>
