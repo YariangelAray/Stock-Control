@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="Img/Logo.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>  
+  
+  <title>Elementos del Inventario</title>
+
+</head>
+<body class="content content--ui">
+
+  <aside class="sidebar">
+    <div class="sidebar__logos">
+      <img src="Img/SENA.png" alt="SENA">
+      <hr class="separacion">
+      <img src="Img/LogoTitulo.png" alt="logo">      
+    </div>
+
+    <nav class="sidebar__menu">
+      <ul class="sidebar__list">
+        <li class="sidebar__item">
+          <a href="Inventarios.html"><i class="ri-archive-line icon"></i>Ver Inventarios</a>
+        </li>
+
+        <hr class="separacion separacion--horizontal">
+
+        <div class="menu__items">
+          <li class="sidebar__item">
+            <a href="Ambientes.html"><i class="ri-building-2-line icon"></i>
+              Ambientes
+            </a>
+          </li>
+          <li class="sidebar__item">
+            <a href="Detalles.html"><i class="ri-file-list-line icon"></i>
+              Detalles
+            </a>
+          </li>
+          <li class="sidebar__item sidebar__item--selected">
+            <a href="Elementos.html"><i class="ri-clipboard-line icon"></i>
+            Elementos</a>
+          </li>
+          <li class="sidebar__item">
+            <a href="Reportes.html"><i class="ri-information-line icon"></i>Reportes</a>
+          </li>            
+        </div>
+      </ul>
+    </nav>      
+  </aside>
+
+  <div class="main">
+
+    <header class="header">
+      <h1 class="titulo">Bienvenid@, <span class="nombre-usuario">Administrador</span></h1>
+
+      <label for="menu-activar" class="user">          
+        <i class="ri-user-line icon"></i>
+      </label>
+
+      <input type="checkbox" class="menu-activar" id="menu-activar">
+      
+      <div class="user-menu">
+        <div class="user-menu__header">
+          <div class="user">
+            <i class="ri-user-line icon"></i>      
+          </div>
+
+          <div class="user-menu__info">
+            <h2 class="nombre-completo-usuario">Nombre del Usuario</h2>
+            <p class="user-menu__rol rol">Usuario Administrativo</p>
+          </div>
+        </div>
+        
+        <div class="user-menu__content">
+          <div class="user-menu__separacion">
+            <hr class="separacion separacion--horizontal">
+            <a href="" class="editar-perfil">Editar perfil<i class="ri-edit-line"></i> </a>
+          </div>
+
+          <div class="user-menu__row">
+            <p>Apariencia: </p>
+            <div>
+              <input type="checkbox" id="my-switch" style="display: none;">
+              <label for="my-switch" class="switch">
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="user-menu__row">
+            <a href="index.html" class="button button--white logout">
+              <i class="ri-logout-box-r-line icon"></i>
+              Cerrar Sesión
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </header>
+
+  <main class="dashboard dashboard--table-section">
+
+    <div class="buscador">
+        <i class="icon ri-search-line"></i>
+        <input type="search" placeholder="Buscar elementos">
+    </div>
+
+    <div class="dashboard__header">
+      <h2 class="dashboard__title subtitulo">Elementos en el inventario</h2>
+      <div class="dashboard__actions">
+        <h2 class="text-details text-details--medium-sized">Filtros:</h2>       
+        <select name="filtro-estado" class="input input--select filtro">
+          <option value="">Estados</option>
+        </select>
+        <select name="filtro-ambiente" class="input input--select filtro">
+          <option value="">Ambientes</option>
+        </select>
+  
+        <button class="button" id="AgregarElemento">Agregar Elemento          
+          <i class="ri-add-circle-fill icon"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="dashboard__content">
+
+      <div class="table">
+        <div class="table__header-container">
+          <table class="table__layout">
+            <thead class="table__head">
+              <tr class="table__row">                
+                <th class="table__head-cell text-details text-details--medium-sized">Placa</th>
+                <th class="table__head-cell text-details text-details--medium-sized">Tipo</th>
+                <th class="table__head-cell text-details text-details--medium-sized">Fecha de<br> Adquisición</th>
+                <th class="table__head-cell text-details text-details--medium-sized">Ambiente</th>
+                <th class="table__head-cell text-details text-details--medium-sized">Estado</th>
+                <th class="table__head-cell text-details text-details--medium-sized">Observaciones</th>               
+              </tr>
+            </thead>
+          </table>
+        </div>
+
+        <div class="table__scroll">
+          <table class="table__layout">
+            <tbody class="table__body">              
+              <tr class="table__row">
+                <td class="table__cell text-details">ejemlo</td>
+                <td class="table__cell text-details">ejemplo</td>
+                <td class="table__cell text-details">ejemplo</td>
+                <td class="table__cell text-details">ejemplo</td>
+                <td class="table__cell text-details">ejemplo</td>
+                <td class="table__cell text-details">ejemplo</td>
+              </tr>            
+              <tr class="table__row">
+                <td class="table__cell text-details">ejemlo</td>
+                <td class="table__cell text-details">ejemplo</td>
+                <td class="table__cell text-details">ejemplo</td>
+                <td class="table__cell text-details">ejemplo</td>
+                <td class="table__cell text-details">ejemplo</td>
+                <td class="table__cell text-details">ejemplo</td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__cell text-details">ejemlo</td>
+                <td class="table__cell text-details">ejemplo</td>
+                <td class="table__cell text-details">ejemplo</td>
+                <td class="table__cell text-details">ejemplo</td>
+                <td class="table__cell text-details">ejemplo</td>
+                <td class="table__cell text-details">ejemplo</td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__cell text-details">ejemlo</td>
+                <td class="table__cell text-details">ejemplo</td>
+                <td class="table__cell text-details">ejemplo</td>
+                <td class="table__cell text-details">ejemplo</td>
+                <td class="table__cell text-details">ejemplo</td>
+                <td class="table__cell text-details">ejemplo</td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__cell text-details">ejemlo</td>
+                <td class="table__cell text-details">ejemplo</td>
+                <td class="table__cell text-details">ejemplo</td>
+                <td class="table__cell text-details">ejemplo</td>
+                <td class="table__cell text-details">ejemplo</td>
+                <td class="table__cell text-details">ejemplo</td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__cell text-details">ejemlo</td>
+                <td class="table__cell text-details">ejemplo</td>
+                <td class="table__cell text-details">ejemplo</td>
+                <td class="table__cell text-details">ejemplo</td>
+                <td class="table__cell text-details">ejemplo</td>
+                <td class="table__cell text-details">ejemplo</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </main>
+  </div>
+</body>
+</html>

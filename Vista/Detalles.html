@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="Img/Logo.png" type="image/png">
-  
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
-  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>  
   <title>Detalles</title>
 
 </head>
@@ -34,13 +32,13 @@
               Ambientes
             </a>
           </li>
-          <li class="sidebar__item">
+          <li class="sidebar__item sidebar__item--selected">
             <a href="Detalles.html"><i class="ri-file-list-line icon"></i>
               Detalles
             </a>
           </li>
           <li class="sidebar__item">
-            <a href="Bienes.html"><i class="ri-clipboard-line icon"></i>
+            <a href="Elementos.html"><i class="ri-clipboard-line icon"></i>
             Elementos</a>
           </li>
           <li class="sidebar__item">
@@ -98,14 +96,12 @@
           </div>
         </div>
       </div>
-
     </header>
 
     <main class="dashboard dashboard--details-section">
-
       <div class="dashboard__content">
 
-        <h2 class="subtitulo dashboard__title dashboard__title--separacion">Resumen general</h2>
+        <h2 class="dashboard__title dashboard__title--separacion">Resumen general</h2>
         <div class="dashboard__row">
           <p class="text-details text-details--medium-sized">Nombre del inventario:</p>
           <p class="text-details text-details--medium-sized text-details--bold">Nombre del inventario</p>
@@ -143,16 +139,16 @@
 
         <div class="dashboard__row acces-code">
           <p class="text-details text-details--medium-sized ">Código de Acceso:</p>
-          <p class="text-details text-details--medium-sized ">c0d1g0</p>
+          <p class="text-details text-details--medium-sized " id="codigo-acceso">c0d1g0</p>
           <p class="text-details text-details--medium-sized ">Expira en:</p>
-          <p class="text-details text-details--medium-sized ">05:59:58</p>
+          <p class="text-details text-details--medium-sized " id="tiempo-acceso">05:59:58</p>
         </div>
 
       </div>
 
       <div class="dashboard__actions">
-        <button class="button">Exportar Excel <iconify-icon icon="ri:import-fill" class="icon"></iconify-icon></button>
-        <button class="button">Generar Informe <iconify-icon icon="tdesign:file-download-filled" class="icon"></iconify-icon></button>
+        <button class="button">Exportar Excel <i class="ri-import-fill icon"></i></button>
+        <button class="button">Generar Informe <i class="ri-file-download-fill icon"></i></button>
         <button class="button button--white">Generar Código de Acceso</button>
       </div>
 
