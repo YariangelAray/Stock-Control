@@ -101,8 +101,6 @@ body{
 .home__img-cajas{
   display: flex;
   align-items: center;
-  /* min-width: 450px;
-  max-width: 450px; */
   width: 30vw;
   height: 100%;
 }
@@ -197,6 +195,7 @@ body{
 .form__control{
   padding-top: 10px;
   position: relative;
+  width: 100%;
 }
 
 .form--signup .form__body{
@@ -229,7 +228,7 @@ body{
 
   background-image: url('Img/arrow-down-s-line.svg');
   background-repeat: no-repeat;
-  background-position: right 0.5rem center;
+  background-position: right 0.4rem center;
   background-size: 30px;
   padding-right: 40px;
 }
@@ -246,9 +245,13 @@ body{
   margin-bottom: 10px;
 }
 
-input[name="contrasena"] + .icon{
+.input.contrasena{
+  padding-right: 35px;
+}
+
+.input.contrasena + .icon{
   position: absolute;
-  right: 15px;
+  right: 10px;
   top: 20px;
   font-size: 1.2rem;
   color: var(--gris-letras-oscuras);
@@ -256,9 +259,11 @@ input[name="contrasena"] + .icon{
 }
 
 .form__action{
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 10px;
 }
 
 .button{
@@ -268,7 +273,6 @@ input[name="contrasena"] + .icon{
   min-width: 150px;
   width: max-content;
   height: 40px;
-  margin: 10px;
   font-weight: 600;
   font-size: 1.2rem;
   color: var(--blanco);
@@ -363,6 +367,7 @@ input[name="contrasena"] + .icon{
   flex-direction: column;
   padding: 10px 15px;
   position: relative;
+  box-shadow: 2px 0 6px 0 #00000047;
 }
 
 .sidebar__logos{
@@ -441,7 +446,22 @@ input[name="contrasena"] + .icon{
 .titulo{
   font-size: var(--fuente-grande);
   font-weight: 600;
-  color: var(--verde-oscuro);
+  color: var(--gris-letras-oscuras);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.header__inventario{  
+  display: inline-block;
+  color: var(--gris-letras);
+  max-width: 40vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: bottom;
+}
+
+.header__flecha{
+  color: var(--gris-letras);  
 }
 
 /* MENU DE USUARIO */
@@ -534,7 +554,7 @@ input[name="contrasena"] + .icon{
 .user-menu__separacion {  
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
   width: 100%;
   margin-top: 10px;
 }
@@ -549,18 +569,14 @@ input[name="contrasena"] + .icon{
   width: 0;
 }
 
-.editar-perfil {
+.user-menu__link {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 5px;
   color: var(--blanco);
   font-weight: 500;
   font-size: var(--fuente-pequena);
   text-decoration: none;
-}
-
-.editar-perfil i {
-  font-size: var(--fuente-normal);
 }
 
 .user-menu__row{
@@ -573,15 +589,7 @@ input[name="contrasena"] + .icon{
   color: var(--blanco);
 }
 
-.logout{
-  margin: 0;
-  font-size: var(--fuente-normal);
-  font-weight: 550;
-  padding: 5px 10px;
-  border-radius: 12px;
-}
-
-.logout .icon{
+.button--white .icon{
   font-size: 1.2rem;
 }
 
@@ -751,16 +759,16 @@ input:checked + .switch .slider{
   background-color: var(--gris-claro);
 }
 
-.main .button, .main .button--white{
-  font-size: var(--fuente-normal);
-  padding: 8px 12px;
-  height: 35px;
-}
-
 .button--white{
   background-color: var(--blanco);
   color: var(--gris-letras);
   box-shadow: 0 2px 2px 0 #00000047;
+}
+
+.main .button, .main .button--white{
+  font-size: var(--fuente-normal);
+  padding: 8px 12px;
+  height: 35px;
 }
 
 .button .icon{
@@ -856,6 +864,9 @@ input:checked + .switch .slider{
   align-items: center;
 }
 
+.card__actions{
+  margin-top: 15px;
+}
 /* DASHBOARD DE DETALLES */
 
 .dashboard--details-section{
@@ -937,7 +948,6 @@ input:checked + .switch .slider{
 .dashboard--table-section .dashboard__actions .button{
   position: absolute;
   right: 0;
-  margin: 0;
 }
 
 .dashboard .input{
@@ -1033,22 +1043,20 @@ input:checked + .switch .slider{
 .dashboard--profile .dashboard__header .button{
   position: absolute;
   right: 15px;
-  margin: 0;
 }
 
 .dashboard--profile .dashboard__content{
   display: flex;
   align-items: start;
+  padding-top: 5px;
 }
 
 .dashboard--profile .form{
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: max-content;
-  width: 100%;
-  /* height: 100%; */
+  grid-template-columns: 1fr 1fr;  
+  width: 100%;  
   gap: 20px;
-  padding: 10px;
+  padding: 0 10px;
 }
 
 .form__section{
@@ -1057,26 +1065,52 @@ input:checked + .switch .slider{
   background-color: var(--gris-claro);
   border: 2px solid var(--verde-claro);
   border-radius: var(--borde-redondeado);
-  padding: 10px 30px 20px;
+  padding: 5px 25px 20px;
   color: var(--gris-letras-oscuras);
   font-weight: 600;
-  white-space: nowrap;
+  gap: 10px;
+  position: relative;
+  align-items: end;
+}
+
+.form__section:hover{
+  box-shadow: 0 2px 2px 0 #00000047;
 }
 
 .form__section-title{
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--verde-claro);
-  padding: 0px 10px;
+  padding: 0 10px;
   background-image: linear-gradient( var(--gris-panel), var(--gris-claro));
 }
 
 .dashboard--profile .form__control{
-  display: flex;
+  display: grid;
+  grid-template-columns: 200px 1fr;
   align-items: center;
-  justify-content: space-between;
+  gap: 10px;
+  height: 40px;
 }
 
 .dashboard--profile .input{
-  width:65%;
+  width: 100%;
+}
+
+.dashboard--profile .input.contrasena + .icon{
+  top: 15px;
+  font-weight: normal;
+}
+
+.form__control--description .rol-descripcion {      
+  line-height: 1.5;
+}
+
+.dashboard--profile .form__control--description {  
+  height: auto;
+  align-items: flex-start;
+}
+
+.form__section .button{
+  margin-top: 10px;
 }

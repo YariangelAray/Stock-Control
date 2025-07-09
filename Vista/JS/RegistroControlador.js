@@ -21,7 +21,6 @@ const manejarErrores = respuesta => {
 document.addEventListener("DOMContentLoaded", () => {
   const formulario = document.querySelector(".form--signup");
 
-
   const campos = [...formulario].filter((elemento) => elemento.hasAttribute("required") && (elemento.tagName == "INPUT" || elemento.tagName == "SELECT"));
 
   campos.forEach((campo) => {
@@ -57,8 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
     validaciones.datos.tipo_documento_id = parseInt(validaciones.datos.tipo_documento_id);
     validaciones.datos.genero_id = parseInt(validaciones.datos.genero_id);
     validaciones.datos.ficha_id = parseInt(validaciones.datos.ficha_id);
-    validaciones.datos.rol_id = 2;
-    delete validaciones.datos.programas;
+    // validaciones.datos.rol_id = 2;
+    delete validaciones.datos.programa;
 
     try {
 

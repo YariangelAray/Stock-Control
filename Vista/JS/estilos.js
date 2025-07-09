@@ -1,5 +1,5 @@
 const contrasena = document.querySelector('#contrasena');
-const iconoPass = document.querySelector('input[name="contrasena"] + .icon');
+const iconoPass = document.querySelector('.input.contrasena + .icon');
 
 iconoPass.addEventListener('click', () => {
   if (contrasena.type == 'password') {
@@ -13,5 +13,3 @@ iconoPass.addEventListener('click', () => {
     iconoPass.classList.add('ri-eye-line');
   }
 })
-
-
