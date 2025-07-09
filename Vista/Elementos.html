@@ -115,18 +115,19 @@
 
       <div class="dashboard__header">
         <h2 class="dashboard__title">Elementos en el inventario</h2>
+        <p class="text-details text-details--medium-sized dashboard__details">Aquí se muestran todos los elementos del inventario. Seleccione uno para ver su información completa.</p>
         <div class="dashboard__actions">
           <h2 class="text-details text-details--medium-sized">Filtros:</h2>
-          <select name="filtro-estado" class="input input--select filtro">
+          <select name="filtro-estado" class="input input--small input--select filtro">
             <option value="">Estados</option>
           </select>
-          <select name="filtro-ambiente" class="input input--select filtro">
+          <select name="filtro-ambiente" class="input input--small input--select filtro">
             <option value="">Ambientes</option>
           </select>
 
-          <button class="button" id="AgregarElemento">Agregar Elemento
+          <a href="Nuevo-Elemento.html" class="button" id="AgregarElemento">Agregar Elemento
             <i class="ri-add-circle-fill icon"></i>
-          </button>
+          </a>
         </div>
       </div>
 
@@ -158,10 +159,11 @@
             </tr>         
           </tbody>
         </table>
-
       </div>
     </main>
   </div>
+
+  <script src="JS/ElementosControlador.js" type="module"></script>
 </body>
 
 </html>

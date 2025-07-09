@@ -115,19 +115,19 @@
           <fieldset class="form__section">
             <legend class="form__section-title">Datos personales</legend>
 
-            <div class="form__control">
+            <div class="form__control form__control--stacked">
               <label for="nombres">Nombres:</label>
-              <input type="text" class="input" placeholder="Nombres" name="nombres" id="nombres" value="Enzy Zulay" required>
+              <input type="text" class="input input--small" placeholder="Nombres" name="nombres" id="nombres" value="Enzy Zulay" required>
             </div>
             
-            <div class="form__control">
+            <div class="form__control form__control--stacked">
               <label for="apellidos">Apellidos:</label>
-              <input type="text" class="input" placeholder="Apellidos" name="apellidos" id="apellidos" value="Angarita Bermudez" required>
+              <input type="text" class="input input--small" placeholder="Apellidos" name="apellidos" id="apellidos" value="Angarita Bermudez" required>
             </div>
             
-            <div class="form__control">
+            <div class="form__control form__control--stacked">
               <label for="tipo_documento">Tipo de Documento:</label>
-              <select name="tipo_documento_id" class="input input--select" required id="tipo_documento">
+              <select name="tipo_documento_id" class="input input--small input--select" required id="tipo_documento">
                 <option value="">Tipo de Documento</option>
                 <option value="1" selected>Cédula de Ciudadania</option>
                 <option value="2">Tarjeta de Identidad</option>
@@ -135,23 +135,23 @@
               </select>
             </div>
             
-            <div class="form__control">
+            <div class="form__control form__control--stacked">
               <label for="documento">N° Documento:</label>
-              <input type="text" class="input" placeholder="N° de Documento" name="documento" id="documento" value="1023456789" required>
+              <input type="text" class="input input--small" placeholder="N° de Documento" name="documento" id="documento" value="1023456789" required>
             </div>
-            <div class="form__control">
+            <div class="form__control form__control--stacked">
               <label for="correo">Correo Electrónico:</label>
-              <input type="text" class="input" placeholder="Correo Electrónico" name="correo" id="correo" value="ejemplo@ejemplo.com" required>
+              <input type="text" class="input input--small" placeholder="Correo Electrónico" name="correo" id="correo" value="ejemplo@ejemplo.com" required>
             </div>
             
-            <div class="form__control">
+            <div class="form__control form__control--stacked">
               <label for="telefono">N° de Télefono:</label>
-              <input type="text" class="input" placeholder="Número de Télefono" name="telefono" id="telefono" value="3001234567" required>
+              <input type="text" class="input input--small" placeholder="Número de Télefono" name="telefono" id="telefono" value="3001234567" required>
             </div>
             
-            <div class="form__control">
+            <div class="form__control form__control--stacked">
               <label for="genero">Género:</label>
-              <select name="genero_id" class="input input--select" id="genero" required>
+              <select name="genero_id" class="input input--small input--select" id="genero" required>
                 <option value="">Seleccione su Género</option>
                 <option value="1">Masculino</option>
                 <option value="2" selected>Femenino</option>
@@ -163,18 +163,18 @@
           <fieldset class="form__section">
             <legend class="form__section-title">Formacion</legend>
 
-            <div class="form__control">
+            <div class="form__control form__control--stacked">
               <label for="programa">Programa de Formación:</label>
-              <select name="programa" id="programa" class="input input--select" required>
+              <select name="programa" id="programa" class="input input--small input--select" required>
                 <option value="">Programa de Formación</option>
                 <option value="1" selected>(N/A) - No Aplica</option>
                 <option value="2">(ADSO) - Análisis y Desarrollo de Software</option>
               </select>
             </div>
             
-            <div class="form__control">
+            <div class="form__control form__control--stacked">
               <label for="ficha">Ficha:</label>
-              <select name="ficha_id" class="input input--select" id="ficha" required>
+              <select name="ficha_id" class="input input--small input--select" id="ficha" required>
                 <option value="">Ficha</option>
                 <option value="1" selected>(N/A) - No Aplica</option>
                 <option value="2">2894667</option>
@@ -185,15 +185,15 @@
           <fieldset class="form__section">
             <legend class="form__section-title">Seguridad</legend>
 
-            <div class="form__control">
+            <div class="form__control form__control--stacked">
               <label for="contrasena-antigua">Contraseña anterior:</label>
-              <input type="password" class="input contrasena" placeholder="Contraseña anterior" name="contrasena-antigua" id="contrasena-antigua" required>
+              <input type="password" class="input input--small contrasena" placeholder="Contraseña anterior" name="contrasena-antigua" id="contrasena-antigua" required>
               <i class="icon ri-eye-line"></i>
             </div>
 
-            <div class="form__control">
+            <div class="form__control form__control--stacked">
               <label for="contrasena-nueva">Contraseña nueva:</label>
-              <input type="password" class="input contrasena" placeholder="Contraseña nueva" name="contrasena-nueva" id="contrasena-nueva" required>
+              <input type="password" class="input input--small contrasena" placeholder="Contraseña nueva" name="contrasena-nueva" id="contrasena-nueva" required>
               <i class="icon ri-eye-line"></i>
             </div>
             <button class="button">Actualizar contraseña</button>             
@@ -202,21 +202,22 @@
           <fieldset class="form__section">
             <legend class="form__section-title">Rol</legend>
 
-            <div class="form__control">
+            <div class="form__control form__control--stacked">
               <label for="rol">Rol:</label>
-              <select name="rol" id="rol" class="input input--select rol" required>
+              <select name="rol" id="rol" class="input input--small input--select rol" required>
                 <option value="">Seleccione su Rol</option>
                 <option value="1" selected>Usuario Administrativo</option>
                 <option value="2">Usuario Corriente</option>
               </select>
             </div>                          
-            <div class="form__control form__control--description">
+            <div class="form__control form__control--stacked form__control form__control--autoheight">
               <label>Descripción:</label>
               <p class="text-details rol-descripcion">
                 Descripción del rol seleccionado. Ejemplo: Usuario Administrativo - Acceso completo al sistema.
               </p>
             </div>
           </fieldset>
+          
         </form>
       </div>
     </main>

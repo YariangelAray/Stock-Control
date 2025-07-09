@@ -55,8 +55,6 @@
         <span class="header__inventario">DESARROLLO DE SOFTWARE</span>
         <i class="ri-arrow-right-s-line header__flecha"></i>
         <span class="header__seccion">ELEMENTOS</span>
-        <i class="ri-arrow-right-s-line header__flecha"></i>
-        NUEVO
       </h1>
 
       <label for="menu-activar" class="user">
@@ -104,126 +102,107 @@
 
     </header>
 
-    <main class="dashboard dashboard--profile">
+    <main class="dashboard dashboard--new-element">
 
       <div class="dashboard__header">
-        <h2 class="dashboard__title">Usario Administrativo</h2>
-        <p class="dashboard__details text-details text-details--medium-sized">En este apartado se muestra su información personal. Puede editar ciertos datos según sea necesario.</p>
-        <button class="button" id="AgregarElemento">Editar perfil
+        <h2 class="dashboard__title">Registro de Nuevo Elemento</h2>
+        <!-- <p class="dashboard__details text-details text-details--medium-sized">En este apartado se muestra su información personal. Puede editar ciertos datos según sea necesario.</p> -->
+        <!-- <button class="button" id="AgregarElemento">Editar perfil
           <i class="ri-edit-fill icon"></i>
-        </button>
+        </button> -->
       </div>
 
       <div class="dashboard__content">
 
-        <form action="" class="form" autocomplete="off" >
+        <form action="" class="form" autocomplete="off">
 
-          <fieldset class="form__section">
-            <legend class="form__section-title">Datos personales</legend>
+          <div class="form__control form__control--stacked">
+            <label for="placa">Placa:</label>
+            <input type="text" class="input input--small" placeholder="Placa" name="placa" id="placa" required>
+          </div>
 
-            <div class="form__control">
-              <label for="nombres">Nombres:</label>
-              <input type="text" class="input" placeholder="Nombres" name="nombres" id="nombres" value="Enzy Zulay" required>
-            </div>
-            
-            <div class="form__control">
-              <label for="apellidos">Apellidos:</label>
-              <input type="text" class="input" placeholder="Apellidos" name="apellidos" id="apellidos" value="Angarita Bermudez" required>
-            </div>
-            
-            <div class="form__control">
-              <label for="tipo_documento">Tipo de Documento:</label>
-              <select name="tipo_documento_id" class="input input--select" required id="tipo_documento">
-                <option value="">Tipo de Documento</option>
-                <option value="1" selected>Cédula de Ciudadania</option>
-                <option value="2">Tarjeta de Identidad</option>
-                <option value="3">Cédula de Extranjería</option>
-              </select>
-            </div>
-            
-            <div class="form__control">
-              <label for="documento">N° Documento:</label>
-              <input type="text" class="input" placeholder="N° de Documento" name="documento" id="documento" value="1023456789" required>
-            </div>
-            <div class="form__control">
-              <label for="correo">Correo Electrónico:</label>
-              <input type="text" class="input" placeholder="Correo Electrónico" name="correo" id="correo" value="ejemplo@ejemplo.com" required>
-            </div>
-            
-            <div class="form__control">
-              <label for="telefono">N° de Télefono:</label>
-              <input type="text" class="input" placeholder="Número de Télefono" name="telefono" id="telefono" value="3001234567" required>
-            </div>
-            
-            <div class="form__control">
-              <label for="genero">Género:</label>
-              <select name="genero_id" class="input input--select" id="genero" required>
-                <option value="">Seleccione su Género</option>
-                <option value="1">Masculino</option>
-                <option value="2" selected>Femenino</option>
-                <option value="3">Otro</option>
-              </select>
-            </div>            
-          </fieldset>
+          <div class="form__control form__control--stacked">
+            <label for="serial">Serial:</label>
+            <input type="text" class="input input--small" placeholder="Serial (opcional)" name="serial" id="serial">
+          </div>
 
-          <fieldset class="form__section">
-            <legend class="form__section-title">Formacion</legend>
+          <div class="form__control form__control--stacked form__control--span">
+            <label for="tipo_elemento">Tipo de Elemento:</label>
+            <select name="tipo_elemento_id" class="input input--small input--select" required id="tipo_elemento">
+              <option value="">Tipo de Elemento</option>
+              <option value="1">Otro</option>
+            </select>
+          </div>
 
-            <div class="form__control">
-              <label for="programa">Programa de Formación:</label>
-              <select name="programa" id="programa" class="input input--select" required>
-                <option value="">Programa de Formación</option>
-                <option value="1" selected>(N/A) - No Aplica</option>
-                <option value="2">(ADSO) - Análisis y Desarrollo de Software</option>
-              </select>
+          <!--  -->
+          <fieldset class="form__section tipo-elemento">
+            <legend class="form__section-title">Tipo de Elemento</legend>
+            <p class="text-details">
+              Ingrese los datos del tipo de elemento.
+            </p>
+
+            <div class="form__control form__control--stacked form__control--span">
+              <label for="nombre-elemento">Nombre:</label>
+              <input type="text" class="input input--small" placeholder="Nombre" name="nombre" id="nombre-elemento" required>
             </div>
-            
-            <div class="form__control">
-              <label for="ficha">Ficha:</label>
-              <select name="ficha_id" class="input input--select" id="ficha" required>
-                <option value="">Ficha</option>
-                <option value="1" selected>(N/A) - No Aplica</option>
-                <option value="2">2894667</option>
-              </select>
+            <div class="form__control form__control--stacked">
+              <label for="marca-elemento">Marca:</label>
+              <input type="text" class="input input--small" placeholder="Marca (opcional)" name="marca" id="marca-elemento">
+            </div>
+            <div class="form__control form__control--stacked">
+              <label for="modelo-elemento">Modelo:</label>
+              <input type="text" class="input input--small" placeholder="Modelo (opcional)" name="modelo" id="modelo-elemento">
+            </div>
+            <div class="form__control form__control--stacked form__control--autoheight">
+              <label for="descripcion-elemento">Descripción:</label>
+              <textarea type="text" class="input input--small input--textarea" placeholder="Descripción (opcional)" name="descripcion" id="descripcion-elemento"> </textarea>
+            </div>
+            <div class="form__control form__control--stacked form__control--autoheight">
+              <label for="observaciones-elemento">Observaciones:</label>
+              <textarea class="input input--small input--textarea" placeholder="Observaciones (opcional)" name="observaciones" id="observaciones-elemento"></textarea>                
             </div>
           </fieldset>
+          <!--  -->
 
-          <fieldset class="form__section">
-            <legend class="form__section-title">Seguridad</legend>
+          <div class="form__control form__control--stacked">
+            <label for="fecha_adquisicion">Fecha de Adquisición:</label>
+            <input type="date" class="input input--small" name="fecha_adquisicion" id="fecha_adquisicion" required>
+          </div>
 
-            <div class="form__control">
-              <label for="contrasena-antigua">Contraseña anterior:</label>
-              <input type="password" class="input contrasena" placeholder="Contraseña anterior" name="contrasena-antigua" id="contrasena-antigua" required>
-              <i class="icon ri-eye-line"></i>
-            </div>
+          <div class="form__control form__control--stacked">
+            <label for="correo">Valor Monetario:</label>
+            <input type="text" class="input input--small" placeholder="1000.00" name="correo" id="correo" required>
+          </div>
 
-            <div class="form__control">
-              <label for="contrasena-nueva">Contraseña nueva:</label>
-              <input type="password" class="input contrasena" placeholder="Contraseña nueva" name="contrasena-nueva" id="contrasena-nueva" required>
-              <i class="icon ri-eye-line"></i>
-            </div>
-            <button class="button">Actualizar contraseña</button>             
-          </fieldset>
+          <div class="form__control form__control--stacked">
+            <label for="estado">Estado:</label>
+            <select name="estado_id" class="input input--small input--select" id="estado">
+              <option value="">Seleccione el estado del elemento</option>
+              <option value="1">Bueno</option>
+              <option value="2">Regular</option>
+              <option value="3">Malo</option>
+            </select>
+          </div>
 
-          <fieldset class="form__section">
-            <legend class="form__section-title">Rol</legend>
+          <div class="form__control form__control--stacked">
+            <label for="ambiente">Ubicación:</label>
+            <select name="ambiente_id" class="input input--small input--select" id="ambiente">
+              <option value="">Seleccione el ambiente</option>
+              <option value="1">Desarrollo de Software</option>
+              <option value="2">Fábrica de Software</option>              
+            </select>
+          </div>
 
-            <div class="form__control">
-              <label for="rol">Rol:</label>
-              <select name="rol" id="rol" class="input input--select rol" required>
-                <option value="">Seleccione su Rol</option>
-                <option value="1" selected>Usuario Administrativo</option>
-                <option value="2">Usuario Corriente</option>
-              </select>
-            </div>                          
-            <div class="form__control form__control--description">
-              <label>Descripción:</label>
-              <p class="text-details rol-descripcion">
-                Descripción del rol seleccionado. Ejemplo: Usuario Administrativo - Acceso completo al sistema.
-              </p>
-            </div>
-          </fieldset>
+          <div class="form__control form__control--stacked form__control--span form__control--autoheight">
+            <label for="observaciones">Observaciones:</label>
+            <textarea class="input input--small input--textarea" placeholder="Observaciones (opcional)" name="observaciones"
+              id="observaciones"></textarea>
+          </div>          
         </form>
+      </div>
+      <div class="dashboard__actions">
+        <button class="button">Registrar</button>
+        <a href="Elementos.html" class="button button--red">Cancelar</a>
       </div>
     </main>
   </div>
