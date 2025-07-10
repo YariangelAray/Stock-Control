@@ -1,19 +1,24 @@
 <dialog class="modal modal--elemento">
+
   <div class="modal__header">
     <h2 class="modal__title">Detalles del Elemento</h2>
   </div>
+
   <div class="modal__body">
     <form action="" class="form">
+
       <div class="form__control form__control--stacked">
         <label for="placa">Placa:</label>
-        <input type="text" class="input input--small" placeholder="Placa" name="placa" id="placa" value="92241017676"  required>
+        <input type="text" class="input input--small" placeholder="Placa" name="placa" id="placa" value="92241017676"
+          required>
       </div>
-      
+
       <div class="form__control form__control--stacked">
         <label for="serial">Serial:</label>
-        <input type="text" class="input input--small" placeholder="Serial (opcional)" name="serial" value="3H82240000650" id="serial">
+        <input type="text" class="input input--small" placeholder="Serial (opcional)" name="serial"
+          value="3H82240000650" id="serial">
       </div>
-      
+
       <div class="form__control form__control--stacked form__control--span">
         <label for="tipo_elemento">Tipo de Elemento:</label>
         <select name="tipo_elemento_id" class="input input--small input--select" required id="tipo_elemento">
@@ -21,17 +26,18 @@
           <option value="1">Otro</option>
         </select>
       </div>
-      
+
       <div class="form__control form__control--stacked">
         <label for="fecha_adquisicion">Fecha de Adquisición:</label>
-        <input type="date" class="input input--small" name="fecha_adquisicion" id="fecha_adquisicion" value="2024-12-13" required>
+        <input type="date" class="input input--small" name="fecha_adquisicion" id="fecha_adquisicion" value="2024-12-13"
+          required>
       </div>
-      
+
       <div class="form__control form__control--stacked">
-        <label for="correo">Valor Monetario:</label>
-        <input type="text" class="input input--small" placeholder="1000.00" name="correo" id="correo" required>
+        <label for="valor">Valor Monetario:</label>
+        <input type="text" class="input input--small" placeholder="1000.00" name="valor_monetario" id="valor" required>
       </div>
-      
+
       <div class="form__control form__control--stacked">
         <label for="estado">Estado:</label>
         <select name="estado_id" class="input input--small input--select" id="estado">
@@ -41,7 +47,7 @@
           <option value="3">Malo</option>
         </select>
       </div>
-      
+
       <div class="form__control form__control--stacked">
         <label for="ambiente">Ubicación:</label>
         <select name="ambiente_id" class="input input--small input--select" id="ambiente">
@@ -50,7 +56,7 @@
           <option value="2" selected>Fábrica de Software</option>
         </select>
       </div>
-      
+
       <div class="form__control form__control--stacked form__control--span form__control--autoheight">
         <label for="observaciones">Observaciones:</label>
         <textarea class="input input--small input--textarea" placeholder="Observaciones (opcional)" name="observaciones"
@@ -58,10 +64,13 @@
       </div>
     </form>
   </div>
+
   <div class="modal__actions">
     <button class="button">Editar
       <i class="ri-edit-fill icon"></i>
     </button>
+    <button class="button button--red dar-baja">Dar de baja</button>
     <button class="button button--white close-modal">Aceptar</button>
   </div>
+  
 </dialog>

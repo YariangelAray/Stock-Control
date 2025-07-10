@@ -1,24 +1,23 @@
-const body = document.querySelector('body');
+import { cargarModal, abrirModal, cerrarModal, mostrarConfirmacion } from './modales.js';
+
 document.addEventListener('DOMContentLoaded', async () => {
+  const modalElemento = await cargarModal('./Modals/ModalElemento.html');
+  await cargarModal('./Modals/ModalConfirmacion.html');
 
-  const tempDiv = document.createElement('div');
-  tempDiv.innerHTML = await (await fetch('./Modals/ModalElemento.html')).text();
+  document.addEventListener('click', async (e) => {
+    if (e.target.closest('.table__row'))
+      abrirModal(modalElemento);
 
-  const modal = tempDiv.querySelector('dialog');
-  
-  body.append(modal);
+    if (e.target.closest('.close-modal') || e.target.tagName === 'DIALOG')
+      cerrarModal();
 
-  document.addEventListener('click', (e) => {
-    if (e.target.closest('.table__row')) {
-      modal.showModal();
-      requestAnimationFrame( ()=> modal.classList.add('visible'))
-    }
-    
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal || e.target.closest('.close-modal')) {
-        modal.classList.remove('visible');
-        setTimeout(() => modal.close(), 300);
+    if (e.target.closest('.dar-baja')) {
+      const confirmado = await mostrarConfirmacion();
+      if (confirmado) {
+        alert('El elemento será dado de baja.');
+      } else {
+        alert('Acción cancelada.');
       }
-    })
-  })
-})
+    }
+  });
+});
