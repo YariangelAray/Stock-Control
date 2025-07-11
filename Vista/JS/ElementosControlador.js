@@ -1,22 +1,36 @@
-import { cargarModal, abrirModal, cerrarModal, mostrarConfirmacion } from './modales.js';
+import { initModalElemento } from '../Modals/modalElemento.js';
+import { initModalGenerarReporte } from '../Modals/modalGenerarReporte.js';
+import { cargarModal, abrirModal, cerrarModal, ocultarModalTemporal, mostrarConfirmacion, cerrarTodo } from './modales.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
+
   const modalElemento = await cargarModal('./Modals/ModalElemento.html');
-  await cargarModal('./Modals/ModalConfirmacion.html');
+  const modalGenerarReporte = await cargarModal('./Modals/ModalGenerarReporte.html');
+  
+  initModalElemento(modalElemento);
+  initModalGenerarReporte(modalGenerarReporte);
 
   document.addEventListener('click', async (e) => {
-    if (e.target.closest('.table__row'))
+    if (e.target.closest('.table__row')) {
       abrirModal(modalElemento);
+    }
 
-    if (e.target.closest('.close-modal') || e.target.tagName === 'DIALOG')
+    if (e.target.closest('.close-modal') || e.target.closest('.cancelar')) {
       cerrarModal();
+    }
 
-    if (e.target.closest('.dar-baja')) {
-      const confirmado = await mostrarConfirmacion();
+    if (e.target.closest('.reportar')) {
+      ocultarModalTemporal(modalElemento);
+      abrirModal(modalGenerarReporte);
+    }
+  });
+
+  modalGenerarReporte.addEventListener('click', async (e) => {
+    if (e.target.closest('.confirmar')) {
+      const confirmado = await mostrarConfirmacion('¿Está seguro de generar el reporte?');
       if (confirmado) {
-        alert('El elemento será dado de baja.');
-      } else {
-        alert('Acción cancelada.');
+        alert('Reporte generado exitosamente.');
+        cerrarModal();
       }
     }
   });

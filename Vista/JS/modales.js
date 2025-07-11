@@ -31,29 +31,46 @@ export const cerrarModal = () => {
     if (anterior) abrirModal(anterior);
 }
 
-export const mostrarConfirmacion = async () => {
-  let modal = document.querySelector('.modal--confirmacion');
-  if (!modal) {
-    modal = await cargarModal('./Modals/ModalConfirmacion.html');
-  }
-  
-  const btnSi = modal.querySelector('.confirmar');
-  const btnNo = modal.querySelector('.cancelar');
+let modalConfirmacion = null;
 
-  modal.showModal();
-  requestAnimationFrame(() => modal.classList.add('visible'));
+export const mostrarConfirmacion = async (mensaje = '¿Está seguro de continuar?') => {
+    if (!modalConfirmacion) {
+        modalConfirmacion = await cargarModal('./Modals/ModalConfirmacion.html');
 
-  return new Promise((resolve) => {
-
-    const resolver = (valor) => {
-        modal.classList.remove('visible');
-        setTimeout(() => {
-            modal.close();
-            resolve(valor);
-        }, 300);
+        document.body.appendChild(modalConfirmacion);
     }
 
-    btnSi.onclick = () => resolver(true);
-    btnNo.onclick = () => resolver(false);
-  });
+    const mensajeSpan = modalConfirmacion.querySelector('.modal__mensaje');    
+    mensajeSpan.textContent = mensaje;
+
+    const btnSi = modalConfirmacion.querySelector('.si');
+    const btnNo = modalConfirmacion.querySelector('.no');
+
+    modalConfirmacion.showModal();
+    requestAnimationFrame(() => modalConfirmacion.classList.add('visible'));
+
+    return new Promise((resolve) => {
+        const resolver = (valor) => {
+            modalConfirmacion.classList.remove('visible');
+            setTimeout(() => {
+                modalConfirmacion.close();
+                resolve(valor);
+            }, 300);
+        }
+
+        modalConfirmacion.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') resolver(true);
+        });
+
+        btnSi.onclick = () => resolver(true);
+        btnNo.onclick = () => resolver(false);
+    });
+};
+
+export const cerrarTodo = () => {
+  while (modalStack.length > 0) {
+    const modal = modalStack.pop();
+    modal.classList.remove('visible');
+    setTimeout(() => modal.close(), 300);
+  }
 };

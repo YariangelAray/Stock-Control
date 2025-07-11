@@ -1,4 +1,4 @@
-<dialog class="modal modal--reporte">
+<dialog class="modal modal--reporte" backdrop-close="false">
 
     <div class="modal__header">
         <h2 class="modal__title">Detalles del Reporte</h2>
@@ -43,6 +43,12 @@
                 </p>
             </div>
 
+            <div class="form__control form__control--stacked form__control--span">
+                <label>Imágenes:</label>
+                    <div class="reporte__imagenes">
+                        <p class="reporte__sin-imagenes text-details">No hay imágenes.</p>                        
+                    </div>
+            </div>
         </form>
     </div>
 
@@ -51,5 +57,4 @@
         </button>
         <button class="button button--white close-modal">Aceptar</button>
     </div>
-
 </dialog>
