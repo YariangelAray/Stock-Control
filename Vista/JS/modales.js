@@ -71,6 +71,6 @@ export const cerrarTodo = () => {
   while (modalStack.length > 0) {
     const modal = modalStack.pop();
     modal.classList.remove('visible');
-    setTimeout(() => modal.close(), 300);
+    setTimeout(() => modal.close(), 400);
   }
 };

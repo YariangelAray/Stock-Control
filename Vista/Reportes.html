@@ -55,110 +55,109 @@
     </nav>
   </aside>
 
-  <div class="main">
+  <header class="header">
+    <h1 class="titulo">
+      <span class="header__inventario">DESARROLLO DE SOFTWARE</span>
+      <i class="ri-arrow-right-s-line header__flecha"></i>
+      <span class="header__seccion">REPORTES</span>
+    </h1>
 
-    <header class="header">
-      <h1 class="titulo">
-        <span class="header__inventario">DESARROLLO DE SOFTWARE</span>
-        <i class="ri-arrow-right-s-line header__flecha"></i>
-        <span class="header__seccion">REPORTES</span>
-      </h1>
+    <label for="menu-activar" class="user">
+      <i class="ri-user-line icon"></i>
+    </label>
 
-      <label for="menu-activar" class="user">
-        <i class="ri-user-line icon"></i>
-      </label>
+    <input type="checkbox" class="menu-activar" id="menu-activar">
 
-      <input type="checkbox" class="menu-activar" id="menu-activar">
-
-      <div class="user-menu">
-        <div class="user-menu__header">
-          <div class="user">
-            <i class="ri-user-line icon"></i>
-          </div>
-
-          <div class="user-menu__info">
-            <h2 class="nombre-completo-usuario">Nombre del Usuario</h2>
-            <p class="user-menu__rol rol">Usuario Administrativo</p>
-          </div>
+    <div class="user-menu">
+      <div class="user-menu__header">
+        <div class="user">
+          <i class="ri-user-line icon"></i>
         </div>
 
-        <div class="user-menu__content">
-          <div class="user-menu__separacion">
-            <hr class="separacion separacion--horizontal">
-            <a href="Perfil-Usuario.html" class="user-menu__link">Ver perfil<i class="ri-edit-line"></i> </a>
-          </div>
-
-          <div class="user-menu__row">
-            <p>Apariencia: </p>
-            <div>
-              <input type="checkbox" id="my-switch" style="display: none;">
-              <label for="my-switch" class="switch">
-                <span class="slider"></span>
-              </label>
-            </div>
-          </div>
-
-          <div class="user-menu__row">
-            <a href="index.html" class="button button--white logout">
-              <i class="ri-logout-box-r-line icon"></i>
-              Cerrar Sesión
-            </a>
-          </div>
+        <div class="user-menu__info">
+          <h2 class="nombre-completo-usuario">Nombre del Usuario</h2>
+          <p class="user-menu__rol rol">Usuario Administrativo</p>
         </div>
       </div>
 
-    </header>
+      <div class="user-menu__content">
+        <div class="user-menu__separacion">
+          <hr class="separacion separacion--horizontal">
+          <a href="Perfil-Usuario.html" class="user-menu__link">Ver perfil<i class="ri-edit-line"></i> </a>
+        </div>
 
-    <main class="dashboard dashboard--table-section">
+        <div class="user-menu__row">
+          <p>Apariencia: </p>
+          <div>
+            <input type="checkbox" id="my-switch" style="display: none;">
+            <label for="my-switch" class="switch">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
 
-      <div class="buscador">
-        <i class="icon ri-search-line"></i>
-        <input type="search" placeholder="Buscar reportes">
+        <div class="user-menu__row">
+          <a href="index.html" class="button button--white logout">
+            <i class="ri-logout-box-r-line icon"></i>
+            Cerrar Sesión
+          </a>
+        </div>
       </div>
+    </div>
 
-      <div class="dashboard__header">
-        <h2 class="dashboard__title">Reportes realizados</h2>
-        <p class="text-details text-details--medium-sized dashboard__details">En esta sección se mostrarán todos los reportes generados por los usuarios. Seleccione uno para ver más detalles.</p>
-        <!-- <div class="dashboard__actions">
-          <h2 class="text-details text-details--medium-sized">Filtros:</h2>       
-          <select name="filtro-estado" class="input input--select filtro">
-            <option value="">Estados</option>
-          </select>
-    
-          <button class="button" id="AgregarElemento">Agregar Elemento          
-            <i class="ri-add-circle-fill icon"></i>
-          </button>
-        </div> -->
-      </div>
+  </header>
 
-      <div class="dashboard__content">
+  <main class="dashboard dashboard--table-section">
 
-        <table class="table">
-          <thead class="table__head">
-            <tr class="table__row-head">
-              <th class="table__head-cell text-details text-details--medium-sized">Fecha</th>
-              <th class="table__head-cell text-details text-details--medium-sized">Autor</th>
-              <th class="table__head-cell text-details text-details--medium-sized">Placa del<br>Elemento</th>
-              <th class="table__head-cell text-details text-details--medium-sized">Asunto</th>              
-            </tr>
-          </thead>
+    <div class="buscador">
+      <i class="icon ri-search-line"></i>
+      <input type="search" placeholder="Buscar reportes">
+    </div>
 
-          <tbody class="table__body">
-            <tr class="table__row">              
-              <td class="table__cell text-details">ejemplo</td>
-              <td class="table__cell text-details">ejemplo</td>
-              <td class="table__cell text-details">ejemplo</td>
-              <td class="table__cell text-details">ejemplo</td>
-            </tr>
-          </tbody>
-        </table>
+    <div class="dashboard__header">
+      <h2 class="dashboard__title">Reportes realizados</h2>
+      <p class="text-details text-details--medium-sized dashboard__details">En esta sección se mostrarán todos los reportes generados por los usuarios. Seleccione uno para ver más detalles.</p>
+      <!-- <div class="dashboard__actions">
+        <h2 class="text-details text-details--medium-sized">Filtros:</h2>       
+        <select name="filtro-estado" class="input input--select filtro">
+          <option value="">Estados</option>
+        </select>
+  
+        <button class="button" id="AgregarElemento">Agregar Elemento          
+          <i class="ri-add-circle-fill icon"></i>
+        </button>
+      </div> -->
+    </div>
 
-      </div>
-    </main>
-  </div>
+    <div class="dashboard__content">
+
+      <table class="table">
+        <thead class="table__head">
+          <tr class="table__row-head">
+            <th class="table__head-cell text-details text-details--medium-sized">Fecha</th>
+            <th class="table__head-cell text-details text-details--medium-sized">Autor</th>
+            <th class="table__head-cell text-details text-details--medium-sized">Placa del<br>Elemento</th>
+            <th class="table__head-cell text-details text-details--medium-sized">Asunto</th>              
+          </tr>
+        </thead>
+
+        <tbody class="table__body">
+          <tr class="table__row">              
+            <td class="table__cell text-details">ejemplo</td>
+            <td class="table__cell text-details">ejemplo</td>
+            <td class="table__cell text-details">ejemplo</td>
+            <td class="table__cell text-details">ejemplo</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </main>
+
   <dialog id="visor-imagen" class="visor">
     <img src="" alt="">
   </dialog>
+  
   <script type="module" src="JS/ReportesControlador.js"></script>
 </body>
 

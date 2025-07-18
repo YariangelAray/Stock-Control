@@ -49,179 +49,178 @@
     </nav>
   </aside>
 
-  <div class="main">
-    <header class="header">
-      <h1 class="titulo">PERFIL DE <span class="nombre-usuario">ADMINISTRADOR</span></h1>
+  <header class="header">
+    <h1 class="titulo">PERFIL DE <span class="nombre-usuario">ADMINISTRADOR</span></h1>
 
-      <label for="menu-activar" class="user">
-        <i class="ri-user-line icon"></i>
-      </label>
+    <label for="menu-activar" class="user">
+      <i class="ri-user-line icon"></i>
+    </label>
 
-      <input type="checkbox" class="menu-activar" id="menu-activar">
+    <input type="checkbox" class="menu-activar" id="menu-activar">
 
-      <div class="user-menu">
-        <div class="user-menu__header">
-          <div class="user">
-            <i class="ri-user-line icon"></i>
-          </div>
-
-          <div class="user-menu__info">
-            <h2 class="nombre-completo-usuario">Nombre del Usuario</h2>
-            <p class="user-menu__rol rol">Usuario Administrativo</p>
-          </div>
+    <div class="user-menu">
+      <div class="user-menu__header">
+        <div class="user">
+          <i class="ri-user-line icon"></i>
         </div>
 
-        <div class="user-menu__content">
-          <div class="user-menu__separacion">
-            <hr class="separacion separacion--horizontal">
-            <a href="Perfil-Usuario.html" class="user-menu__link">Ver perfil<i class="ri-edit-line icon"></i> </a>
-          </div>
-
-          <div class="user-menu__row">
-            <p>Apariencia: </p>
-            <div>
-              <input type="checkbox" id="my-switch" style="display: none;">
-              <label for="my-switch" class="switch">
-                <span class="slider"></span>
-              </label>
-            </div>
-          </div>
-
-          <div class="user-menu__row">
-            <a href="index.html" class="button button--white logout">
-              <i class="ri-logout-box-r-line icon"></i>
-              Cerrar Sesión
-            </a>
-          </div>
+        <div class="user-menu__info">
+          <h2 class="nombre-completo-usuario">Nombre del Usuario</h2>
+          <p class="user-menu__rol rol">Usuario Administrativo</p>
         </div>
       </div>
 
-    </header>
+      <div class="user-menu__content">
+        <div class="user-menu__separacion">
+          <hr class="separacion separacion--horizontal">
+          <a href="Perfil-Usuario.html" class="user-menu__link">Ver perfil<i class="ri-edit-line icon"></i> </a>
+        </div>
 
-    <main class="dashboard dashboard--profile">
+        <div class="user-menu__row">
+          <p>Apariencia: </p>
+          <div>
+            <input type="checkbox" id="my-switch" style="display: none;">
+            <label for="my-switch" class="switch">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
 
-      <div class="dashboard__header">
-        <h2 class="dashboard__title">Usario Administrativo</h2>
-        <p class="dashboard__details text-details text-details--medium-sized">En este apartado se muestra su información personal. Puede editar ciertos datos según sea necesario.</p>
-        <button class="button" id="AgregarElemento">Editar perfil
-          <i class="ri-edit-fill icon"></i>
-        </button>
+        <div class="user-menu__row">
+          <a href="index.html" class="button button--white logout">
+            <i class="ri-logout-box-r-line icon"></i>
+            Cerrar Sesión
+          </a>
+        </div>
       </div>
+    </div>
 
-      <div class="dashboard__content">
+  </header>
 
-        <form action="" class="form" autocomplete="off" >
+  <main class="dashboard dashboard--profile">
 
-          <fieldset class="form__section">
-            <legend class="form__section-title">Datos personales</legend>
+    <div class="dashboard__header">
+      <h2 class="dashboard__title">Usario Administrativo</h2>
+      <p class="dashboard__details text-details text-details--medium-sized">En este apartado se muestra su información personal. Puede editar ciertos datos según sea necesario.</p>
+      <button class="button" id="AgregarElemento">Editar perfil
+        <i class="ri-edit-fill icon"></i>
+      </button>
+    </div>
 
-            <div class="form__control form__control--stacked">
-              <label for="nombres">Nombres:</label>
-              <input type="text" class="input input--small" placeholder="Nombres" name="nombres" id="nombres" value="Enzy Zulay" required>
-            </div>
-            
-            <div class="form__control form__control--stacked">
-              <label for="apellidos">Apellidos:</label>
-              <input type="text" class="input input--small" placeholder="Apellidos" name="apellidos" id="apellidos" value="Angarita Bermudez" required>
-            </div>
-            
-            <div class="form__control form__control--stacked">
-              <label for="tipo_documento">Tipo de Documento:</label>
-              <select name="tipo_documento_id" class="input input--small input--select" required id="tipo_documento">
-                <option value="">Tipo de Documento</option>
-                <option value="1" selected>Cédula de Ciudadania</option>
-                <option value="2">Tarjeta de Identidad</option>
-                <option value="3">Cédula de Extranjería</option>
-              </select>
-            </div>
-            
-            <div class="form__control form__control--stacked">
-              <label for="documento">N° Documento:</label>
-              <input type="text" class="input input--small" placeholder="N° de Documento" name="documento" id="documento" value="1023456789" required>
-            </div>
-            <div class="form__control form__control--stacked">
-              <label for="correo">Correo Electrónico:</label>
-              <input type="text" class="input input--small" placeholder="Correo Electrónico" name="correo" id="correo" value="ejemplo@ejemplo.com" required>
-            </div>
-            
-            <div class="form__control form__control--stacked">
-              <label for="telefono">N° de Télefono:</label>
-              <input type="text" class="input input--small" placeholder="Número de Télefono" name="telefono" id="telefono" value="3001234567" required>
-            </div>
-            
-            <div class="form__control form__control--stacked">
-              <label for="genero">Género:</label>
-              <select name="genero_id" class="input input--small input--select" id="genero" required>
-                <option value="">Seleccione su Género</option>
-                <option value="1">Masculino</option>
-                <option value="2" selected>Femenino</option>
-                <option value="3">Otro</option>
-              </select>
-            </div>            
-          </fieldset>
+    <div class="dashboard__content">
 
-          <fieldset class="form__section">
-            <legend class="form__section-title">Formacion</legend>
+      <form action="" class="form" autocomplete="off" >
 
-            <div class="form__control form__control--stacked">
-              <label for="programa">Programa de Formación:</label>
-              <select name="programa" id="programa" class="input input--small input--select" required>
-                <option value="">Programa de Formación</option>
-                <option value="1" selected>(N/A) - No Aplica</option>
-                <option value="2">(ADSO) - Análisis y Desarrollo de Software</option>
-              </select>
-            </div>
-            
-            <div class="form__control form__control--stacked">
-              <label for="ficha">Ficha:</label>
-              <select name="ficha_id" class="input input--small input--select" id="ficha" required>
-                <option value="">Ficha</option>
-                <option value="1" selected>(N/A) - No Aplica</option>
-                <option value="2">2894667</option>
-              </select>
-            </div>
-          </fieldset>
+        <fieldset class="form__section">
+          <legend class="form__section-title">Datos personales</legend>
 
-          <fieldset class="form__section">
-            <legend class="form__section-title">Seguridad</legend>
-
-            <div class="form__control form__control--stacked">
-              <label for="contrasena-antigua">Contraseña anterior:</label>
-              <input type="password" class="input input--small contrasena" placeholder="Contraseña anterior" name="contrasena-antigua" id="contrasena-antigua" required>
-              <i class="icon ri-eye-line"></i>
-            </div>
-
-            <div class="form__control form__control--stacked">
-              <label for="contrasena-nueva">Contraseña nueva:</label>
-              <input type="password" class="input input--small contrasena" placeholder="Contraseña nueva" name="contrasena-nueva" id="contrasena-nueva" required>
-              <i class="icon ri-eye-line"></i>
-            </div>
-            <button class="button">Actualizar contraseña</button>             
-          </fieldset>
-
-          <fieldset class="form__section">
-            <legend class="form__section-title">Rol</legend>
-
-            <div class="form__control form__control--stacked">
-              <label for="rol">Rol:</label>
-              <select name="rol" id="rol" class="input input--small input--select rol" required>
-                <option value="">Seleccione su Rol</option>
-                <option value="1" selected>Usuario Administrativo</option>
-                <option value="2">Usuario Corriente</option>
-              </select>
-            </div>                          
-            <div class="form__control form__control--stacked form__control form__control--autoheight">
-              <label>Descripción:</label>
-              <p class="text-details">
-                Descripción del rol seleccionado. Ejemplo: Usuario Administrativo - Acceso completo al sistema.
-              </p>
-            </div>
-          </fieldset>
+          <div class="form__control form__control--stacked">
+            <label for="nombres">Nombres:</label>
+            <input type="text" class="input input--small" placeholder="Nombres" name="nombres" id="nombres" value="Enzy Zulay" required>
+          </div>
           
-        </form>
-      </div>
-    </main>
-  </div>
+          <div class="form__control form__control--stacked">
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" class="input input--small" placeholder="Apellidos" name="apellidos" id="apellidos" value="Angarita Bermudez" required>
+          </div>
+          
+          <div class="form__control form__control--stacked">
+            <label for="tipo_documento">Tipo de Documento:</label>
+            <select name="tipo_documento_id" class="input input--small input--select" required id="tipo_documento">
+              <option value="">Tipo de Documento</option>
+              <option value="1" selected>Cédula de Ciudadania</option>
+              <option value="2">Tarjeta de Identidad</option>
+              <option value="3">Cédula de Extranjería</option>
+            </select>
+          </div>
+          
+          <div class="form__control form__control--stacked">
+            <label for="documento">N° Documento:</label>
+            <input type="text" class="input input--small" placeholder="N° de Documento" name="documento" id="documento" value="1023456789" required>
+          </div>
+          <div class="form__control form__control--stacked">
+            <label for="correo">Correo Electrónico:</label>
+            <input type="text" class="input input--small" placeholder="Correo Electrónico" name="correo" id="correo" value="ejemplo@ejemplo.com" required>
+          </div>
+          
+          <div class="form__control form__control--stacked">
+            <label for="telefono">N° de Télefono:</label>
+            <input type="text" class="input input--small" placeholder="Número de Télefono" name="telefono" id="telefono" value="3001234567" required>
+          </div>
+          
+          <div class="form__control form__control--stacked">
+            <label for="genero">Género:</label>
+            <select name="genero_id" class="input input--small input--select" id="genero" required>
+              <option value="">Seleccione su Género</option>
+              <option value="1">Masculino</option>
+              <option value="2" selected>Femenino</option>
+              <option value="3">Otro</option>
+            </select>
+          </div>            
+        </fieldset>
+
+        <fieldset class="form__section">
+          <legend class="form__section-title">Formacion</legend>
+
+          <div class="form__control form__control--stacked">
+            <label for="programa">Programa de Formación:</label>
+            <select name="programa" id="programa" class="input input--small input--select" required>
+              <option value="">Programa de Formación</option>
+              <option value="1" selected>(N/A) - No Aplica</option>
+              <option value="2">(ADSO) - Análisis y Desarrollo de Software</option>
+            </select>
+          </div>
+          
+          <div class="form__control form__control--stacked">
+            <label for="ficha">Ficha:</label>
+            <select name="ficha_id" class="input input--small input--select" id="ficha" required>
+              <option value="">Ficha</option>
+              <option value="1" selected>(N/A) - No Aplica</option>
+              <option value="2">2894667</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <fieldset class="form__section">
+          <legend class="form__section-title">Seguridad</legend>
+
+          <div class="form__control form__control--stacked">
+            <label for="contrasena-antigua">Contraseña anterior:</label>
+            <input type="password" class="input input--small contrasena" placeholder="Contraseña anterior" name="contrasena-antigua" id="contrasena-antigua" required>
+            <i class="icon ri-eye-line"></i>
+          </div>
+
+          <div class="form__control form__control--stacked">
+            <label for="contrasena-nueva">Contraseña nueva:</label>
+            <input type="password" class="input input--small contrasena" placeholder="Contraseña nueva" name="contrasena-nueva" id="contrasena-nueva" required>
+            <i class="icon ri-eye-line"></i>
+          </div>
+          <button class="button">Actualizar contraseña</button>             
+        </fieldset>
+
+        <fieldset class="form__section">
+          <legend class="form__section-title">Rol</legend>
+
+          <div class="form__control form__control--stacked">
+            <label for="rol">Rol:</label>
+            <select name="rol" id="rol" class="input input--small input--select rol" required>
+              <option value="">Seleccione su Rol</option>
+              <option value="1" selected>Usuario Administrativo</option>
+              <option value="2">Usuario Corriente</option>
+            </select>
+          </div>                          
+          <div class="form__control form__control--stacked form__control form__control--autoheight">
+            <label>Descripción:</label>
+            <p class="text-details">
+              Descripción del rol seleccionado. Ejemplo: Usuario Administrativo - Acceso completo al sistema.
+            </p>
+          </div>
+        </fieldset>
+        
+      </form>
+    </div>
+  </main>
+
 </body>
 
 </html>

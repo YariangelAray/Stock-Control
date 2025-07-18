@@ -50,116 +50,113 @@
       </ul>
     </nav>
   </aside>
+  
+  <header class="header">
+    <h1 class="titulo">
+      <span class="header__inventario">DESARROLLO DE SOFTWARE</span>
+      <i class="ri-arrow-right-s-line header__flecha"></i>
+      <span class="header__seccion">DETALLES</span>
+    </h1>
 
-  <div class="main">
+    <label for="menu-activar" class="user">
+      <i class="ri-user-line icon"></i>
+    </label>
 
-    <header class="header">
-      <h1 class="titulo">
-        <span class="header__inventario">DESARROLLO DE SOFTWARE</span>
-        <i class="ri-arrow-right-s-line header__flecha"></i>
-        <span class="header__seccion">DETALLES</span>
-      </h1>
+    <input type="checkbox" class="menu-activar" id="menu-activar">
 
-      <label for="menu-activar" class="user">
-        <i class="ri-user-line icon"></i>
-      </label>
-
-      <input type="checkbox" class="menu-activar" id="menu-activar">
-
-      <div class="user-menu">
-        <div class="user-menu__header">
-          <div class="user">
-            <i class="ri-user-line icon"></i>
-          </div>
-
-          <div class="user-menu__info">
-            <h2 class="nombre-completo-usuario">Nombre del Usuario</h2>
-            <p class="user-menu__rol rol">Usuario Administrativo</p>
-          </div>
+    <div class="user-menu">
+      <div class="user-menu__header">
+        <div class="user">
+          <i class="ri-user-line icon"></i>
         </div>
 
-        <div class="user-menu__content">
-          <div class="user-menu__separacion">
-            <hr class="separacion separacion--horizontal">
-            <a href="Perfil-Usuario.html" class="user-menu__link">Ver perfil<i class="ri-edit-line"></i> </a>
-          </div>
-
-          <div class="user-menu__row">
-            <p>Apariencia: </p>
-            <div>
-              <input type="checkbox" id="my-switch" style="display: none;">
-              <label for="my-switch" class="switch">
-                <span class="slider"></span>
-              </label>
-            </div>
-          </div>
-
-          <div class="user-menu__row">
-            <a href="index.html" class="button button--white logout">
-              <i class="ri-logout-box-r-line icon"></i>
-              Cerrar Sesión
-            </a>
-          </div>
+        <div class="user-menu__info">
+          <h2 class="nombre-completo-usuario">Nombre del Usuario</h2>
+          <p class="user-menu__rol rol">Usuario Administrativo</p>
         </div>
       </div>
-    </header>
 
-    <main class="dashboard dashboard--details-section">
-      <div class="dashboard__content">
-
-        <h2 class="dashboard__title dashboard__title--separacion">Resumen general</h2>
-        <div class="dashboard__row">
-          <p class="text-details text-details--medium-sized">Nombre del inventario:</p>
-          <p class="text-details text-details--medium-sized text-details--bold">Nombre del inventario</p>
-        </div>
-        <div class="dashboard__row">
-          <p class="text-details text-details--medium-sized">Responsable:</p>
-          <p class="text-details text-details--medium-sized text-details--bold">Nombre del Administrador</p>
-        </div>
-        <div class="dashboard__row">
-          <p class="text-details text-details--medium-sized">Fecha de creación:</p>
-          <p class="text-details text-details--medium-sized text-details--bold">01/06/2020</p>
-        </div>
-        <div class="dashboard__row">
-          <p class="text-details text-details--medium-sized">Última actualización:</p>
-          <p class="text-details text-details--medium-sized text-details--bold">01/04/2025</p>
+      <div class="user-menu__content">
+        <div class="user-menu__separacion">
+          <hr class="separacion separacion--horizontal">
+          <a href="Perfil-Usuario.html" class="user-menu__link">Ver perfil<i class="ri-edit-line"></i> </a>
         </div>
 
-        <h2 class="dashboard__title dashboard__title--separacion">Estadísticas</h2>
-        <div class="dashboard__row">
-          <p class="text-details text-details--medium-sized">Total de bienes registrados:</p>
-          <p class="text-details text-details--medium-sized text-details--bold">1256</p>
-        </div>
-        <div class="dashboard__row">
-          <p class="text-details text-details--medium-sized">Valor monetario total:</p>
-          <p class="text-details text-details--medium-sized text-details--bold">$ 91,080,750.00</p>
-        </div>
-        <div class="dashboard__row">
-          <p class="text-details text-details--medium-sized">Ambientes cubiertos:</p>
-          <p class="text-details text-details--medium-sized text-details--bold">2</p>
-        </div>
-        <div class="dashboard__row">
-          <p class="text-details text-details--medium-sized">Último elemento registrado:</p>
-          <p class="text-details text-details--medium-sized text-details--bold">último elemento</p>
+        <div class="user-menu__row">
+          <p>Apariencia: </p>
+          <div>
+            <input type="checkbox" id="my-switch" style="display: none;">
+            <label for="my-switch" class="switch">
+              <span class="slider"></span>
+            </label>
+          </div>
         </div>
 
-        <div class="dashboard__row acces-code">
-          <p class="text-details text-details--medium-sized ">Código de Acceso:</p>
-          <p class="text-details text-details--medium-sized codigo-acceso">c0d1g0</p>
-          <p class="text-details text-details--medium-sized ">Expira en:</p>
-          <p class="text-details text-details--medium-sized " id="tiempo-acceso">05:59:58</p>
+        <div class="user-menu__row">
+          <a href="index.html" class="button button--white logout">
+            <i class="ri-logout-box-r-line icon"></i>
+            Cerrar Sesión
+          </a>
         </div>
+      </div>
+    </div>
+  </header>
 
+  <main class="dashboard dashboard--details-section">
+    <div class="dashboard__content">
+
+      <h2 class="dashboard__title dashboard__title--separacion">Resumen general</h2>
+      <div class="dashboard__row">
+        <p class="text-details text-details--medium-sized">Nombre del inventario:</p>
+        <p class="text-details text-details--medium-sized text-details--bold">Nombre del inventario</p>
+      </div>
+      <div class="dashboard__row">
+        <p class="text-details text-details--medium-sized">Responsable:</p>
+        <p class="text-details text-details--medium-sized text-details--bold">Nombre del Administrador</p>
+      </div>
+      <div class="dashboard__row">
+        <p class="text-details text-details--medium-sized">Fecha de creación:</p>
+        <p class="text-details text-details--medium-sized text-details--bold">01/06/2020</p>
+      </div>
+      <div class="dashboard__row">
+        <p class="text-details text-details--medium-sized">Última actualización:</p>
+        <p class="text-details text-details--medium-sized text-details--bold">01/04/2025</p>
       </div>
 
-      <div class="dashboard__actions">
-        <button class="button">Exportar Excel <i class="ri-import-fill icon"></i></button>
-        <button class="button">Generar Informe <i class="ri-file-download-fill icon"></i></button>
-        <button class="button button--white generar-codigo">Generar Código de Acceso</button>
+      <h2 class="dashboard__title dashboard__title--separacion">Estadísticas</h2>
+      <div class="dashboard__row">
+        <p class="text-details text-details--medium-sized">Total de bienes registrados:</p>
+        <p class="text-details text-details--medium-sized text-details--bold">1256</p>
+      </div>
+      <div class="dashboard__row">
+        <p class="text-details text-details--medium-sized">Valor monetario total:</p>
+        <p class="text-details text-details--medium-sized text-details--bold">$ 91,080,750.00</p>
+      </div>
+      <div class="dashboard__row">
+        <p class="text-details text-details--medium-sized">Ambientes cubiertos:</p>
+        <p class="text-details text-details--medium-sized text-details--bold">2</p>
+      </div>
+      <div class="dashboard__row">
+        <p class="text-details text-details--medium-sized">Último elemento registrado:</p>
+        <p class="text-details text-details--medium-sized text-details--bold">último elemento</p>
       </div>
 
-    </main>
-  </div>
+      <div class="dashboard__row acces-code">
+        <p class="text-details text-details--medium-sized ">Código de Acceso:</p>
+        <p class="text-details text-details--medium-sized codigo-acceso">c0d1g0</p>
+        <p class="text-details text-details--medium-sized ">Expira en:</p>
+        <p class="text-details text-details--medium-sized " id="tiempo-acceso">05:59:58</p>
+      </div>
+
+    </div>
+
+    <div class="dashboard__actions">
+      <button class="button">Exportar Excel <i class="ri-import-fill icon"></i></button>
+      <button class="button">Generar Informe <i class="ri-file-download-fill icon"></i></button>
+      <button class="button button--white generar-codigo">Generar Código de Acceso</button>
+    </div>
+
+  </main>
 
   <script type="module" src="JS/DetallesControlador.js"></script>
 </body>
