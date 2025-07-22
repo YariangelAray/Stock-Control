@@ -1,15 +1,17 @@
-const contrasena = document.querySelector('#contrasena');
-const iconoPass = document.querySelector('.input.contrasena + .icon');
+const contrasenas = document.querySelectorAll('.contrasena');
+const iconosPass = document.querySelectorAll('.input.contrasena + .icon');
 
-iconoPass.addEventListener('click', () => {
-  if (contrasena.type == 'password') {
-    contrasena.type = 'text';
-    iconoPass.classList.remove('ri-eye-line');
-    iconoPass.classList.add('ri-eye-close-line');
-  }
-  else {
-    contrasena.type = 'password'
-    iconoPass.classList.remove('ri-eye-close-line');
-    iconoPass.classList.add('ri-eye-line');
-  }
-})
+iconosPass.forEach((icono, index) => {
+  icono.addEventListener('click', () => {
+    const input = contrasenas[index];
+    if (input.type === 'password') {
+      input.type = 'text';
+      icono.classList.remove('ri-eye-line');
+      icono.classList.add('ri-eye-close-line');
+    } else {
+      input.type = 'password';
+      icono.classList.remove('ri-eye-close-line');
+      icono.classList.add('ri-eye-line');
+    }
+  });
+});

@@ -77,13 +77,20 @@
       </div>
 
       <div class="user-menu__content">
-        <div class="user-menu__separacion">
-          <hr class="separacion separacion--horizontal">
-          <a href="Perfil-Usuario.html" class="user-menu__link">Ver perfil<i class="ri-edit-line"></i> </a>
-        </div>
-
+        <hr class="separacion">
         <div class="user-menu__row">
-          <p>Apariencia: </p>
+          <a href="Perfil-Usuario.html" class="user-menu__item">
+            <i class="ri-arrow-right-fill icon"></i>
+            Ver perfil
+          </a>
+        </div>
+          
+        <hr class="separacion">
+        <div class="user-menu__row">
+          <span class="user-menu__item">
+            <i class="ri-contrast-2-line icon"></i>
+            Apariencia: 
+          </span>
           <div>
             <input type="checkbox" id="my-switch" style="display: none;">
             <label for="my-switch" class="switch">
@@ -93,12 +100,12 @@
         </div>
 
         <div class="user-menu__row">
-          <a href="index.html" class="button button--white logout">
+          <a href="index.html" class="user-menu__item" id="logout">
             <i class="ri-logout-box-r-line icon"></i>
             Cerrar Sesión
           </a>
         </div>
-      </div>
+      </hr>
     </div>
   </header>
 

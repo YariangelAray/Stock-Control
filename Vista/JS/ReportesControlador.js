@@ -1,4 +1,4 @@
-import { initModalElemento } from '../Modals/modalElemento.js';
+import { configurarModalElemento, initModalElemento } from '../Modals/modalElemento.js';
 import { cargarModal, abrirModal, cerrarModal, ocultarModalTemporal } from './modales.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (e.target.closest('.ver-elemento')) {
       ocultarModalTemporal(modalReporte);
       initModalElemento(modalElemento);
+      configurarModalElemento("editar",modalElemento);
       abrirModal(modalElemento);
     }
     

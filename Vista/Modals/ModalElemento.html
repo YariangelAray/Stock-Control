@@ -21,10 +21,13 @@
 
       <div class="form__control form__control--stacked form__control--span">
         <label for="tipo_elemento">Tipo de Elemento:</label>
-        <select name="tipo_elemento_id" class="input input--small input--select" required id="tipo_elemento">
-          <option value="">Tipo de Elemento</option>
-          <option value="1">Otro</option>
-        </select>
+        <div style="display: flex; width: 100%; align-items: center; gap: 20px;">
+          <select name="tipo_elemento_id" class="input input--small input--select" required id="tipo_elemento">
+            <option value="">Tipo de Elemento</option>
+            <option value="otro">Otro</option>
+          </select>
+          <button class="button" id="agregarTipo">Agregar tipo</button>
+        </div>
       </div>
 
       <div class="form__control form__control--stacked">
@@ -66,11 +69,13 @@
   </div>
 
   <div class="modal__actions">
-    <button class="button">Editar
+    <button class="button editar">Editar
       <i class="ri-edit-fill icon"></i>
     </button>
+    <button class="button guardar">Guardar</button>
     <button class="button button--red dar-baja">Dar de baja</button>
     <button class="button button--red reportar">Génerar reporte</button>
-    <button class="button button--white close-modal">Aceptar</button>
+    <button class="button button--white close-modal aceptar">Aceptar</button>
+    <button class="button button--red close-modal cancelar">Cancelar</button>
   </div>
 </dialog>

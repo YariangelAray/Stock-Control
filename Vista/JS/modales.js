@@ -18,7 +18,7 @@ export const abrirModal = (modal) => {
 
 export const ocultarModalTemporal = (modal) => {
     modal.classList.remove('visible');
-    setTimeout(() => modal.close(), 400);
+    setTimeout(() => modal.close(), 300);
 };
 
 export const cerrarModal = () => {
@@ -26,7 +26,7 @@ export const cerrarModal = () => {
     if (!modal) return;
 
     modal.classList.remove('visible');
-    setTimeout(() => modal.close(), 400);
+    setTimeout(() => modal.close(), 300);
     const anterior = modalStack.at(-1);
     if (anterior) abrirModal(anterior);
 }

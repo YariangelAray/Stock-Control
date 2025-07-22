@@ -1,14 +1,20 @@
-import { cargarModal, abrirModal, cerrarModal, ocultarModalTemporal } from './modales.js';
+import { cargarModal, abrirModal, cerrarModal } from './modales.js';
 
-// const usuario = JSON.parse(sessionStorage.getItem("usuario"));
-// console.log(usuario);
+const usuario = JSON.parse(sessionStorage.getItem("usuario"));
+console.log(usuario);
 
-// const nombreusuario = document.querySelector('.nombre-completo-usuario');
-// const rol = document.querySelector('.rol');
+if (usuario) {
+    const nombreusuario = document.querySelector('.nombre-completo-usuario');
+    const rol = document.querySelector('.rol');
+    
+    nombreusuario.textContent = usuario.nombres + " " + usuario.apellidos;
+    
+    rol.textContent = usuario.rol_id == 1 ? "Administrador" : "Aprendiz";
+}
+else{
+    console.log("Inicie sesión");    
+}
 
-// nombreusuario.textContent = usuario.nombres + " " + usuario.apellidos;
-
-// rol.textContent = usuario.rol_id == 1 ? "Administrador" : "Aprendiz";
 
 document.addEventListener('DOMContentLoaded', async () => {
 
@@ -29,7 +35,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             abrirModal(modalCodigoAcceso);
         }
 
-        if (e.target.closest('.cancelar')) {
+        if (e.target.closest('.close-modal')) {
             cerrarModal();
         }
     });
